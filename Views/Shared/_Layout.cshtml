@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GreenBasket</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GreenBasket.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <div class="border-bottom">
+        <header class="py-3">
+            <div class="container">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <a class="navbar-brand" href="#"><i class="bi bi-cart-check"></i><span
+                                class=" text-dark fw-bold mb-3 display-7">GreenBasket</span>
+                        </a>
+                        <form class="d-flex d-none d-lg-block custom-form-width" action="" role="search">
+                            <input type="search" class="form-control rounded" placeholder="Search for products">
+                        </form>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="list-inline-item">
+                            <a class="text-decoration-none text-dark me-3" href="">
+                                <i class="bi bi-cart p-1"></i>
+                                $0.00
+                                <i class="bi bi-chevron-down"></i>
+                            </a>
+                        </div>
+                        <div class="list-inline-item me-3">
+                            <a class="text-decoration-none text-dark me-3 d-none d-lg-block" href="/">Register</a>
+                        </div>
+                        <div class="list-inline-item">
+                            <button class="btn btn-dark rounded d-none d-lg-block" href="/">Sign In</button>
+                        </div>
+                        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <i class="bi bi-list"></i>
+                        </button>
+
+                    </div>
+                </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav m-2">
+                        <li class="nav-item dropdown me-3">
+                            <a href="#" class="btn btn-green rounded nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <i class="bi bi-list-nested p-3"></i>All Categories
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="" class="dropdown-item">Page 1</a>
+                                <a href="" class="dropdown-item">Page 2</a>
+                                <a href="" class="dropdown-item">Page 3</a>
+                                <a href="" class="dropdown-item">Page 4</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown me-3">
+                            <a href="" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Home</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Page 1</a>
+                                <a class="dropdown-item" href="#">Page 2</a>
+                                <a class="dropdown-item" href="#">Page 3</a>
+                                <a class="dropdown-item" href="#">Page 4</a>
+                            </div>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a href="" class="nav-link text-dark">Page 3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link text-dark">Page 4</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <div class="footer mt-6 pt-5">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12 col-md-12 col-lg-4 mb-4">
+                    <h6 class="fw-bold mb-3">Categories</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Vegetables & Fruits</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Breakfast & instant food</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Bakery & Biscuits</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Atta, rice & dal</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Sauces &spreads</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Organic &gourmet</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Baby care</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Cleaning essentials</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link p-0 text-muted" href="">Personal care</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Dairy, bread & eggs</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Cold drinks & juices</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Tea, coffee & drinks</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Masala, oil & more</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Chicken, meat & fish</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Paan corner</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Pharma & wellness</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a class="nav-link p-0 text-muted" href="">Home & office</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link p-0 text-muted" href="">Pet care</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-8">
+                    <div class="row">
+                        <div class="col-12 col-md-3 col-lg-3">
+                            <h6 class="fw-bold mb-3">Get to know us</h6>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Company</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">About</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Blog</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Help Center</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link p-0 text-muted">Our Value</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-3">
+                            <h6 class="fw-bold mb-3">For Consumers</h6>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Payments</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Shipping</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Product Returns</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">FAQ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link p-0 text-muted">Shop Checkout</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-3">
+                            <h6 class="fw-bold mb-3">Become a Shopper</h6>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Shopper Opportunities</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Become a Shopper</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Earnings</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Ideas & Guides</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link p-0 text-muted">New Retailers</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-3">
+                            <h6 class="fw-bold mb-3">Freshcart programs</h6>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Freshcart programs</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Gift Cards</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Promos & Coupons</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Freshcart Ads</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link p-0 text-muted">Careers</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top py-4">
+                <div class="row text-center align-items-center">
+                    <div class=" col-12 col-lg-5 text-lg-start">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                Payment Partners
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="nav-link p-0" href="">
+                                    <img src="~/img/pay/amazonpay.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="nav-link p-0" href="">
+                                    <img src="~/img/pay/american-express.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="nav-link p-0" href="">
+                                    <img src="~/img/pay/mastercard.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="nav-link p-0" href="">
+                                    <img src="~/img/pay/paypal.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="nav-link p-0" href="">
+                                    <img src="~/img/pay/visa.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-7 text-lg-end">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">Get deliveries with FreshCart</li>
+                            <li class="list-inline-item">
+                                <a class="nav-link p-0" href="">
+                                    <img src="~/img/pay/appstore-btn.svg" alt="" style="width: 140px;">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="nav-link p-0" href="">
+                                    <img src="~/img/pay/googleplay-btn.svg" alt="" style="width: 140px;">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top py-4">
+                <div class="row text-center align-items-center">
+                    <div class="col-12 col-lg-9 text-lg-start">
+                        <span class="small text-muted">© 2022 - 2024 FreshCart eCommerce HTML Template. All rights
+                            reserved. Powered by <a href="#"
+                                class="text-decoration-none text-muted">Codescandy</a>.</span>
+                    </div>
+                    <div class="col-12 col-lg-3 text-lg-end">
+                        <ul class="list-inline">
+                            <li class="list-inline-item text-muted">
+                                Follow us on
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="" class="btn btn-sm btn-social rounded"><i class="bi bi-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="" class="btn btn-sm btn-social rounded"><i class="bi bi-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="" class="btn btn-sm btn-social rounded"><i class="bi bi-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

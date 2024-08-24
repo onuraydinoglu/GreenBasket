@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial",sans-serif;
+}
+
+.bi-cart-check{
+  color: #1B1;
+  font-size: 30px;
+}
+
+a:hover{
+  color: #1b1!important;
+}
+
+.display-7{
+  font-size: 25px;
+}
+
+.bi-list{
+  font-size: 22px;
+}
+
+.form-control {
+  padding: 8px 16px;
+}
+
+.custom-form-width {
+  width: 450px;
+}
+
+@media (min-width: 1400px) {
+  .custom-form-width {
+      width: 550px;
+  }
+}
+
+.form-control:focus {
+  padding: 8px 16px;
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem #c4f6c4;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+#carouselExampleIndicators1 .carousel-inner{
+    height: 650px;
+}
+
+.btn-dark{
+  padding: 8px 16px;
+}
+
+.btn-green {
+  color: #fff;
+  background-color: #1b1; 
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.btn-green:hover {
+  color: #fff;
+  background-color: rgb(14, 142, 14);
+}
+
+.card{
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.card:hover{
+  border: 1px solid #1b1;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1),
+              -2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.py-9{
+  padding-top: 25px;
+}
+
+.py-10{
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.px-8{
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.rounded{
+  border-radius: 8px!important;
+  -webkit-border-radius: 8px!important;
+  -moz-border-radius: 8px!important;
+  -ms-border-radius: 8px!important;
+  -o-border-radius: 8px!important;
+}
+
+@media (min-width: 1400px) {
+  .col-xxl-20 {
+      flex: 0 0 auto;
+      max-width: 20%;
+  }
+}
+
+.card-width{
+  height: 473px;
+}
+
+.timer-card {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/*.filter{
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0,37);
+  border: 2px solid rgba(255, 255, 255, 0,18)
+}*/
+
+
+.btn-social {
+  border:1px solid grey;
+}
+
+.footer{
+  background-color: #F0F3F2;
+}
+
+.list-inline{
+  margin: 0;
+}
