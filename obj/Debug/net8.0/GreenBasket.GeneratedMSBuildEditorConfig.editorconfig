@@ -18,8 +18,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\onura\Desktop\GreenBasket
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/onura/Desktop/GreenBasket/Views/Categories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onura/Desktop/GreenBasket/Views/Categories/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/onura/Desktop/GreenBasket/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onura/Desktop/GreenBasket/Views/Home/_Carousel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfQ2Fyb3VzZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/onura/Desktop/GreenBasket/Views/Shared/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/onura/Desktop/GreenBasket/Views/Shared/_ValidationScriptsPartial.cshtml]

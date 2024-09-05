@@ -31,3 +31,4 @@ C:\Users\onura\Desktop\GreenBasket\obj\Debug\net8.0\ref\GreenBasket.dll
 C:\Users\onura\Desktop\GreenBasket\bin\Debug\net8.0\libman.json
 C:\Users\onura\Desktop\GreenBasket\bin\Debug\net8.0\package-lock.json
 C:\Users\onura\Desktop\GreenBasket\bin\Debug\net8.0\package.json
+C:\Users\onura\Desktop\GreenBasket\obj\Debug\net8.0\GreenBasket.sourcelink.json

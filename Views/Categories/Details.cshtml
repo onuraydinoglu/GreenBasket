@@ -1,0 +1,114 @@
+@model Product
+
+<div class="mt-4">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item me-3">
+                        <a asp-controller="Home" asp-action="Index" class="text-decoration-none text-success">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a asp-controller="Categories" asp-action="List"
+                            class="text-decoration-none text-success mx-3">@Model.CategoryName</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span class="ms-3">@Model.ProductName</span>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="my-4">
+    <div class="row">
+
+        <div class="col-lg-6 pe-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card rounded mb-3">
+                        <div class="d-flex justify-content-center align-items-center"
+                            style="height: 400px; cursor: pointer;">
+                            <img src="~/img/products/@Model.ProductImage" alt="" class="img-fluid rounded">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <img src="~/img/products/@Model.ProductImage" alt="" class="img-fluid rounded">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <img src="~/img/products/@Model.ProductImage" alt="" class="img-fluid rounded">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <img src="~/img/products/@Model.ProductImage" alt="" class="img-fluid rounded">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <img src="~/img/products/@Model.ProductImage" alt="" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 ps-5" id="@Model.ProductId">
+            <div class="border-bottom pb-4">
+                <h2 class="fw-bold mb-3">@Model.ProductName</h2>
+                <h5 class="my-3">@Model.CategoryName</h5>
+                <div>
+                    <span class="fw-bold fs-4 me-1">$@Model.ProductPrice</span>
+                    <span class="text-decoration-line-through text-muted fs-4">$34</span>
+                </div>
+            </div>
+
+            <div class="border-bottom py-4">
+                <button type="button" class="btn btn-outline-secondary rounded px-3 py-2 me-2">250g</button>
+                <button type="button" class="btn btn-outline-secondary rounded px-3 py-2 me-2">500g</button>
+                <button type="button" class="btn btn-outline-secondary rounded px-3 py-2">1kg</button>
+
+                <div class="mt-3">
+                    <button type="button" class="btn btn-green px-5 py-2 rounded">
+                        <i class="feather-icon icon-shopping-bag me-2"></i>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="py-4">
+                <table class="table table-borderless mb-0">
+                    <tbody>
+                        <tr>
+                            <td>Product Code:</td>
+                            <td>@Model.ProductId</td>
+                        </tr>
+                        <tr>
+                            <td>Availability:</td>
+                            <td>In Stock</td>
+                        </tr>
+                        <tr>
+                            <td>Category:</td>
+                            <td>@Model.CategoryName</td>
+                        </tr>
+                        <tr>
+                            <td>Shipping:</td>
+                            <td>
+                                <small>01 day shipping.</small>
+                                <span class="text-muted">( Free pickup today)</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+</div>

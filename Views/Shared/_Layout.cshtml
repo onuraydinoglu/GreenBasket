@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model HomeViewModel
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,13 +16,14 @@
 
 <body>
 
-    <div class="border-bottom">
-        <header class="py-3">
+    <header>
+        <div class="border-bottom pt-3">
             <div class="container">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center">
-                        <a class="navbar-brand" href="#"><i class="bi bi-cart-check"></i><span
-                                class=" text-dark fw-bold mb-3 display-7">GreenBasket</span>
+                        <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                            <i class="bi bi-cart-check"></i>
+                            <span class=" text-dark fw-bold mb-3 display-7">GreenBasket</span>
                         </a>
                         <form class="d-flex d-none d-lg-block custom-form-width" action="" role="search">
                             <input type="search" class="form-control rounded" placeholder="Search for products">
@@ -48,49 +51,53 @@
 
                     </div>
                 </div>
-        </header>
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav m-2">
-                        <li class="nav-item dropdown me-3">
-                            <a href="#" class="btn btn-green rounded nav-link dropdown-toggle"
-                                data-bs-toggle="dropdown">
-                                <i class="bi bi-list-nested p-3"></i>All Categories
-                            </a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a href="" class="dropdown-item">Page 1</a>
-                                <a href="" class="dropdown-item">Page 2</a>
-                                <a href="" class="dropdown-item">Page 3</a>
-                                <a href="" class="dropdown-item">Page 4</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown me-3">
-                            <a href="" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Home</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Page 1</a>
-                                <a class="dropdown-item" href="#">Page 2</a>
-                                <a class="dropdown-item" href="#">Page 3</a>
-                                <a class="dropdown-item" href="#">Page 4</a>
-                            </div>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a href="" class="nav-link text-dark">Page 3</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link text-dark">Page 4</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
-        </nav>
-    </div>
+
+            <nav class="navbar navbar-expand-lg pt-4">
+                <div class="container">
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav m-2">
+                            <li class="nav-item dropdown me-3">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <a href="#" class="btn btn-green rounded nav-link dropdown-toggle"
+                                    data-bs-toggle="dropdown">
+                                    <i class="bi bi-list-nested p-3"></i>All Categories
+                                </a>
+                                <div class="dropdown-menu rounded">
+                                    @foreach (var list in @Model.Categories)
+                                    {
+                                        <a asp-controller="Categories" asp-action="List" class="dropdown-item">
+                                            @list.CategoryName
+                                        </a>
+                                    }
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown me-3">
+                                <a href="#" class="nav-link dropdown-toggle text-dark"
+                                    data-bs-toggle="dropdown">Home</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Page 1</a>
+                                    <a class="dropdown-item" href="#">Page 2</a>
+                                    <a class="dropdown-item" href="#">Page 3</a>
+                                    <a class="dropdown-item" href="#">Page 4</a>
+                                </div>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a href="" class="nav-link text-dark">Page 3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-dark">Page 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
     <div class="container">
         <main role="main" class="pb-3">

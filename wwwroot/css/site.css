@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial",sans-serif;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
 }
 
 .bi-cart-check{
@@ -47,8 +48,30 @@ a:hover{
   -o-border-radius: 8px;
 }
 
+.dropdown-menu{
+  padding: 8px 10px;
+}
+.dropdown-item{
+  padding: 5px 10px;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #1e2125;
+  background-color: #e9ecef;
+  padding: 5px 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.dropdown-item:active {
+  color: #fff !important;
+  text-decoration: none;
+  background-color: #1b1;
+}
+
 #carouselExampleIndicators1 .carousel-inner{
-    height: 650px;
+  height: 550px;
 }
 
 .btn-dark{
@@ -64,8 +87,9 @@ a:hover{
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
 }
+
 .btn-green:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: rgb(14, 142, 14);
 }
 
@@ -113,7 +137,7 @@ a:hover{
 }
 
 .card-width{
-  height: 473px;
+  height: 473.3px;
 }
 
 .timer-card {
@@ -122,13 +146,6 @@ a:hover{
   height: 60px;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
-
-/*.filter{
-  backdrop-filter: blur(30px);
-  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0,37);
-  border: 2px solid rgba(255, 255, 255, 0,18)
-}*/
-
 
 .btn-social {
   border:1px solid grey;
@@ -140,4 +157,57 @@ a:hover{
 
 .list-inline{
   margin: 0;
+}
+
+.bg-light{
+  background-color: #F0F3F2!important;
+}
+
+.w-80{
+width: 80%;
+}
+
+.form-check-input:checked {
+  background-color: rgb(14, 142, 14);
+  border-color: rgb(14, 142, 14);
+}
+
+.form-check-label{
+  color: #5C6C75;
+}
+
+.form-select {  
+  padding: 10px 40px 10px 15px;
+}
+
+.form-select:focus {  
+  padding: 10px 40px 10px 15px;
+  border-color: rgb(14, 142, 14);
+  box-shadow: 0 0 0 0.25rem #c4f6c4;
+}
+
+.page-item{
+  padding: 5px;
+}
+
+.page-link{
+  padding: 8px 16px;
+  color:gray;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.page-link:focus{
+  color: #fff;
+  background-color:rgb(17, 174, 17);
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem #c4f6c4;
+}
+
+.page-link:hover{
+  color: #fff!important;
+  background-color:#1b1
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oMdG9ujGqLX0zW3tsp4fw+HI/oyV5KcDjHDBwWW4J88=",
+  "Hash": "g8GJt+aN08MLB+Fb/2EyMHwKeV7QViibsIby8Ki06fc=",
   "Source": "GreenBasket",
   "BasePath": "_content/GreenBasket",
   "Mode": "Default",
@@ -813,6 +813,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\products\\product-img-9.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\products\\product-single-img-1.jpg",
+      "SourceId": "GreenBasket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\",
+      "BasePath": "_content/GreenBasket",
+      "RelativePath": "img/products/product-single-img-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\product-single-img-1.jpg"
     },
     {
       "Identity": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\s1.jpg",

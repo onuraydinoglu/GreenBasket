@@ -52,7 +52,8 @@
                                 if (item.CategoryId <= 6)
                                 {
                                     <div id="category_@item.CategoryId" class="col-12 col-md-4 col-xl-2 mb-3">
-                                        <a class="text-decoration-none text-dark" href="#">
+                                        <a asp-controller="Categories" asp-action="List" asp-route-id="@item.CategoryId"
+                                            class="text-decoration-none text-dark">
                                             <div class="card d-flex align-items-center justify-content-center rounded">
                                                 <img src="~/img/categories/@item.CategoryImage" class="pt-4" alt="">
                                                 <div class="card-body mb-4">
@@ -145,7 +146,7 @@
                                 <span class="text-dark">$@item.ProductPrice</span>
                             </div>
                             <div>
-                                <a class="btn btn-green btn-sm" href="#">
+                                <a class="btn btn-green rounded btn-sm" href="#">
                                     <i class="bi bi-plus pe-2"></i>Add</a>
                             </div>
                         </div>
