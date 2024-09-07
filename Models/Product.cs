@@ -8,5 +8,6 @@ namespace GreenBasket.Models
         public int ProductPrice { get; set; }
         public int CategoryId { get; set; }
         public string? CategoryName { get; set; }
+        public List<Category> Categories { get; set; } = new List<Category>();
     }
 }

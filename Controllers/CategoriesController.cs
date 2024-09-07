@@ -5,7 +5,7 @@ namespace GreenBasket.Controllers
 {
     public class CategoriesController : Controller
     {
-        public IActionResult List(int id)
+        public IActionResult List()
         {
             var modelView = new HomeViewModel
             {
@@ -18,9 +18,14 @@ namespace GreenBasket.Controllers
             return View(modelView);
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(int? id)
         {
+            if (id == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             var product = Repository.GetById(id);
+
             return View(product);
         }
     }

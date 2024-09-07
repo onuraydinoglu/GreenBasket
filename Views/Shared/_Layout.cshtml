@@ -1,6 +1,4 @@
-﻿@model HomeViewModel
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -68,10 +66,11 @@
                                     <i class="bi bi-list-nested p-3"></i>All Categories
                                 </a>
                                 <div class="dropdown-menu rounded">
-                                    @foreach (var list in @Model.Categories)
+                                    @foreach (var ctg in Model.Categories)
                                     {
-                                        <a asp-controller="Categories" asp-action="List" class="dropdown-item">
-                                            @list.CategoryName
+                                        <a asp-controller="Categories" asp-action="List" asp-route-id="@ctg.CategoryId"
+                                            class="dropdown-item">
+                                            @ctg.CategoryName
                                         </a>
                                     }
                                 </div>

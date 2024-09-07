@@ -140,7 +140,7 @@ namespace GreenBasket.Models
                 return _products;
             }
         }
-        public static Product? GetById(int id)
+        public static Product? GetById(int? id)
         {
             return _products.FirstOrDefault(p => p.ProductId == id);
         }
