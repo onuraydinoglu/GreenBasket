@@ -211,3 +211,18 @@ width: 80%;
   color: #fff!important;
   background-color:#1b1
 }
+
+  
+.nav-lb-tab .nav-item .nav-link{
+  border-radius:0;
+  color: gray;
+  margin-bottom: -1px;
+  padding:16px 0;
+}
+
+.nav-lb-tab .nav-item .nav-link.active, 
+.nav-lb-tab .nav-item .nav-link:hover{
+  background-color:transparent;
+  border-bottom:2px solid #1b1;
+  color:#1b1;
+}

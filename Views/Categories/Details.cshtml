@@ -60,55 +60,210 @@
         </div>
 
         <div class="col-lg-6 ps-5" id="@Model.ProductId">
-            <div class="border-bottom pb-4">
-                <h2 class="fw-bold mb-3">@Model.ProductName</h2>
-                <h5 class="my-3">@Model.CategoryName</h5>
-                <div>
-                    <span class="fw-bold fs-4 me-1">$@Model.ProductPrice</span>
-                    <span class="text-decoration-line-through text-muted fs-4">$34</span>
+
+            <div class="d-flex flex-column justify-content-between h-100">
+                <div class=" border-bottom pb-4">
+                    <h2 class="fw-bold mb-3">@Model.ProductName</h2>
+                    <h5 class="my-3">@Model.CategoryName</h5>
+                    <div>
+                        <span class="fw-bold fs-4 me-1">$@Model.ProductPrice</span>
+                        <span class="text-decoration-line-through text-muted fs-4">$34</span>
+                    </div>
+                </div>
+
+                <div class="border-bottom pb-5">
+                    <button type="button" class="btn btn-outline-secondary rounded px-3 py-2 me-2">250g</button>
+                    <button type="button" class="btn btn-outline-secondary rounded px-3 py-2 me-2">500g</button>
+                    <button type="button" class="btn btn-outline-secondary rounded px-3 py-2">1kg</button>
+
+                    <div class="mt-5">
+                        <button type="button" class="btn btn-green px-5 py-2 rounded">
+                            <i class="feather-icon icon-shopping-bag me-2"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="">
+                    <table class="table table-borderless mb-0">
+                        <tbody>
+                            <tr>
+                                <td>Product Code:</td>
+                                <td>@Model.ProductId</td>
+                            </tr>
+                            <tr>
+                                <td>Availability:</td>
+                                <td>In Stock</td>
+                            </tr>
+                            <tr>
+                                <td>Category:</td>
+                                <td>@Model.CategoryName</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping:</td>
+                                <td>
+                                    <small>01 day shipping.</small>
+                                    <span class="text-muted">( Free pickup today)</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
 
-            <div class="border-bottom py-4">
-                <button type="button" class="btn btn-outline-secondary rounded px-3 py-2 me-2">250g</button>
-                <button type="button" class="btn btn-outline-secondary rounded px-3 py-2 me-2">500g</button>
-                <button type="button" class="btn btn-outline-secondary rounded px-3 py-2">1kg</button>
+    </div>
+</div>
 
-                <div class="mt-3">
-                    <button type="button" class="btn btn-green px-5 py-2 rounded">
-                        <i class="feather-icon icon-shopping-bag me-2"></i>
-                        Add to cart
-                    </button>
+<div class="my-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="border-bottom">
+                <ul class="nav nav-pills nav-lb-tab" id="pills-tab" role="tablist">
+                    <li class="nav-item me-4" role="presentation">
+                        <button class="nav-link active" id="product-dateils-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-product-dateils" type="button" role="tab"
+                            aria-controls="pills-product-dateils" aria-selected="true">Product Details</button>
+                    </li>
+                    <li class="nav-item me-4" role="presentation">
+                        <button class="nav-link" id="information-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-information" type="button" role="tab"
+                            aria-controls="pills-information" aria-selected="false">Information</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="return-conditions-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-return-conditions" type="button" role="tab"
+                            aria-controls="pills-return-conditions" aria-selected="false">Return Conditions</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content mt-5" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-product-dateils" role="tabpanel"
+                    aria-labelledby="product-dateils-tab">
+                    <h5 class="fw-bold">
+                        Nutrient Value & Benefits
+                    </h5>
+                    <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum in
+                        lacus, integer. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, varius habitant
+                        ornare
+                        ac rhoncus. Consequat risus facilisis ante ipsum netus risus adipiscing sagittis sed. Lorem
+                        ipsum
+                        dolor sit amet, consectetur adipiscing elit.
+                    </p>
+
+                    <h5 class="fw-bold">
+                        Storage Tips
+                    </h5>
+                    <p class="text-muted">
+                        Nisi, tellus iaculis urna bibendum in lacus, integer. Id imperdiet vitae varius sed magnis eu
+                        nisi
+                        nunc sit. Vel, varius habitant ornare ac rhoncus. Consequat risus facilisis ante ipsum netus
+                        risus
+                        adipiscing sagittis sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+
+                    <h5 class="fw-bold">
+                        Unit
+                    </h5>
+                    <p class="text-muted">
+                        3 units
+                    </p>
+
+                    <h5 class="fw-bold">
+                        Seller
+                    </h5>
+                    <p class="text-muted">
+                        DMart Pvt. LTD
+                    </p>
+
+                    <h5 class="fw-bold">
+                        Disclaimer
+                    </h5>
+                    <p class="text-muted">
+                        Image shown is a representation and may slightly vary from the actual product. Every effort is
+                        made
+                        to maintain accuracy of all information displayed.
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="pills-information" role="tabpanel" aria-labelledby="information-tab">
+                    <h5 class="fw-bold">
+                        Business Registration No.
+                    </h5>
+                    <p class="text-muted">
+                        TR14-0021
+                    </p>
+
+                    <h5 class="fw-bold">
+                        Origin
+                    </h5>
+                    <p class="text-muted">
+                        TÜRKİYE
+                    </p>
+
+                    <h5 class="fw-bold">
+                        Table of Contents
+                    </h5>
+                    <p class="text-muted">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+
+                    <h5 class="fw-bold">
+                        Food Operator / Manufacturer / Importer / Distributor
+                    </h5>
+                    <p class="text-muted">
+                        Food Operator / Manufacturer / Importer / Distributor
+                    </p>
+
+                    <h5 class="fw-bold">
+                        Food Operator / Manufacturer / Importer / Distributor Number
+                    </h5>
+                    <p class="text-muted">
+                        031364
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="pills-return-conditions" role="tabpanel"
+                    aria-labelledby="return-conditions-tab">
+                    <h5 class="fw-bold">How Can I Start the Return Process?</h5>
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur,</p>
+
+                    <h5 class="fw-bold">Return Policy:</h5>
+                    <p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim et soluta
+                        reiciendis accusantium </p>
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, autem
+                        vel. Repellendus ea veniam</p>
+                    <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod eaque sit
+                        repellendus accusamus quos, earum optio saepe, laudantium exercitationem aliquid ut. Dolor
+                        perferendis a quo autem sed iure provident exercitationem.</p>
+                    <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod eaque sit
+                        repellendus accusamus quos, earum optio saepe, laudantium exercitationem aliquid ut. Dolor
+                        perferendis a quo autem sed iure provident exercitationem.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod eaque sit
+                        repellendus accusamus quos, earum optio saepe, laudantium exercitationem aliquid ut. Dolor
+                        perferendis a quo autem sed iure provident exercitationem.
+                    </p>
+
+                    <h5 class="fw-bold">Situations where the Right of Withdrawal is not Valid</h5>
+                    <ul>
+                        <li class="text-mutedd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor omnis
+                            incidunt est corporis quod laborum perspiciatis labore minima fugit, aperiam soluta ab
+                            accusantium repudiandae odit commodi praesentium, qui inventore! Cumque? </li>
+
+                        <li class="text-mutedd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor omnis
+                            incidunt est corporis quod laborum perspiciatis labore minima fugit, aperiam soluta ab
+                            accusantium repudiandae odit commodi praesentium, qui inventore! Cumque? </li>
+                        <li class="text-mutedd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor omnis
+                            incidunt est corporis quod laborum perspiciatis labore minima fugit, aperiam soluta ab
+                            accusantium repudiandae odit commodi praesentium, qui inventore! Cumque? </li>
+                        <li class="text-mutedd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor omnis
+                            incidunt est corporis quod laborum perspiciatis labore minima fugit, aperiam soluta ab
+                            accusantium repudiandae odit commodi praesentium, qui inventore! Cumque? </li>
+                    </ul>
+
                 </div>
             </div>
-
-            <div class="py-4">
-                <table class="table table-borderless mb-0">
-                    <tbody>
-                        <tr>
-                            <td>Product Code:</td>
-                            <td>@Model.ProductId</td>
-                        </tr>
-                        <tr>
-                            <td>Availability:</td>
-                            <td>In Stock</td>
-                        </tr>
-                        <tr>
-                            <td>Category:</td>
-                            <td>@Model.CategoryName</td>
-                        </tr>
-                        <tr>
-                            <td>Shipping:</td>
-                            <td>
-                                <small>01 day shipping.</small>
-                                <span class="text-muted">( Free pickup today)</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
         </div>
     </div>
 </div>
