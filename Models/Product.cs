@@ -4,7 +4,6 @@ namespace GreenBasket.Models
 {
     public class Product
     {
-        [Key]
         public int ProductId { get; set; }
 
         public string? ProductName { get; set; }
@@ -15,10 +14,8 @@ namespace GreenBasket.Models
 
         public string? ProductUrl { get; set; }
 
-        public string? CategoryName { get; set; }
-
         public int CategoryId { get; set; }
-        public Category Category { get; set; } = null!;
+        public Category? Category { get; set; }
 
         public List<Category> Categories { get; set; } = new List<Category>();
 

@@ -10,7 +10,7 @@
                     </li>
                     <li class="breadcrumb-item">
                         <a asp-controller="Categories" asp-action="List"
-                            class="text-decoration-none text-success mx-3">@Model.CategoryName</a>
+                            class="text-decoration-none text-success mx-3">@Model.Category?.CategoryName</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
                         <span class="ms-3">@Model.ProductName</span>
@@ -64,7 +64,7 @@
             <div class="d-flex flex-column justify-content-between h-100">
                 <div class=" border-bottom pb-4">
                     <h2 class="fw-bold mb-3">@Model.ProductName</h2>
-                    <h5 class="my-3">@Model.CategoryName</h5>
+                    <h5 class="my-3">@Model.Category?.CategoryName</h5>
                     <div>
                         <span class="fw-bold fs-4 me-1">$@Model.ProductPrice</span>
                         <span class="text-decoration-line-through text-muted fs-4">$34</span>
@@ -97,7 +97,7 @@
                             </tr>
                             <tr>
                                 <td>Category:</td>
-                                <td>@Model.CategoryName</td>
+                                <td>@Model.Category?.CategoryName</td>
                             </tr>
                             <tr>
                                 <td>Shipping:</td>
@@ -267,3 +267,5 @@
         </div>
     </div>
 </div>
+
+<vc:products-list></vc:products-list>

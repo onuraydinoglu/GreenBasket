@@ -70,7 +70,7 @@
                                 <div class="dropdown-menu rounded">
                                     @foreach (var ctg in Model.Categories)
                                     {
-                                        <a asp-controller="Categories" asp-action="List" class="dropdown-item">
+                                        <a href="/category/@ctg.CategoryUrl" class="dropdown-item">
                                             @ctg.CategoryName
                                         </a>
                                     }

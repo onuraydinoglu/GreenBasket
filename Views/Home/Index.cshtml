@@ -50,7 +50,7 @@
                                 if (item.CategoryId <= 6)
                                 {
                                     <div id="category_@item.CategoryId" class="col-12 col-md-4 col-xl-2 mb-3">
-                                        <a asp-controller="Categories" asp-action="List" class="text-decoration-none text-dark">
+                                        <a href="/category/@item.CategoryUrl" class="text-decoration-none text-dark">
                                             <div class="card d-flex align-items-center justify-content-center rounded">
                                                 <img src="~/img/categories/@item.CategoryImage" class="pt-4" alt="">
                                                 <div class="card-body mb-4">
@@ -70,7 +70,7 @@
                                 @if (item.CategoryId >= 7)
                                 {
                                     <div id="category_@item.CategoryId" class="col-12 col-md-4 col-xl-2 mb-3">
-                                        <a class="text-decoration-none text-dark" href="#">
+                                        <a href="/category/@item.CategoryUrl" class="text-decoration-none text-dark" href="#">
                                             <div class="card d-flex align-items-center justify-content-center">
                                                 <img src="~/img/categories/@item.CategoryImage" class="pt-4" alt="">
                                                 <div class="card-body mb-4">
@@ -116,43 +116,8 @@
 
 <section class="my-5">
     <h3 class="mb-4">Popular Products</h3>
-    <div class="row">
+    <vc:products-list></vc:products-list>
 
-        @foreach (var item in Model.Products)
-        {
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3 col-xxl-20 mb-4">
-                <div class="card rounded">
-                    <div class="card-body">
-                        <div class="text-center position-relative">
-                            <div class="position-absolute top-0 start-0">
-                                <span class="badge bg-danger">Sale</span>
-                            </div>
-                            <a href="">
-                                <img src="~/img/products/@item.ProductImage" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="text-small mb-1">
-                            <a href="" class="text-decoration-none text-muted"><small>@item.CategoryName</small></a>
-                        </div>
-                        <div class="mb-3">
-                            <a href="" class="text-dark text-decoration-none">@item.ProductName</a>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="text-decoration-line-through text-muted pe-1"></span>
-                                <span class="text-dark">$@item.ProductPrice</span>
-                            </div>
-                            <div>
-                                <a class="btn btn-green rounded btn-sm" href="#">
-                                    <i class="bi bi-plus pe-2"></i>Add</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
-
-    </div>
 </section>
 
 <section class="my-5">
@@ -186,7 +151,7 @@
                             </div>
                             <div class="text-smlall mb-1">
                                 <a class="text-decoration-none text-muted" href="">
-                                    <small>@item.CategoryName</small>
+                                    <small>@item.Category?.CategoryName</small>
                                 </a>
                             </div>
                             <div class="mb-3">

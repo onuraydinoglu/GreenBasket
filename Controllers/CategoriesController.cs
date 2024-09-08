@@ -5,13 +5,22 @@ namespace GreenBasket.Controllers
 {
     public class CategoriesController : Controller
     {
-        public IActionResult List()
+        public IActionResult List(string url)
         {
+            var category = Repository.GetByUrl(url);
+
+            var products = Repository.Products;
+
+            if (category != null)
+            {
+                products = products.Where(p => p.CategoryId == category.CategoryId).ToList();
+            }
+
             var modelView = new HomeViewModel
             {
                 Categories = Repository.Categories,
                 SubCategories = Repository.SubCategories,
-                Products = Repository.Products,
+                Products = products,
                 Stores = Repository.Stores
             };
 

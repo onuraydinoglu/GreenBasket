@@ -11,7 +11,7 @@ namespace GreenBasket.Models
         {
             _categories = new List<Category>()
             {
-                new Category() {CategoryId = 1, CategoryName = "Dairy, Bread & Eggs", CategoryImage ="dairy-bread-eggs.jpg", CategoryUrl="dairy-bread -eggs"},
+                new Category() {CategoryId = 1, CategoryName = "Dairy, Bread & Eggs", CategoryImage ="dairy-bread-eggs.jpg", CategoryUrl="dairy-bread-eggs"},
                 new Category() {CategoryId = 2, CategoryName = "Snack, Munchie", CategoryImage ="snack-munchies.jpg", CategoryUrl="snack-munchie"},
                 new Category() {CategoryId = 3, CategoryName = "Fruits & Vegetables", CategoryImage ="bakery-biscuits.jpg", CategoryUrl="fruits-vegetables"},
                 new Category() {CategoryId = 4, CategoryName = "Cold Drinks & Juices", CategoryImage ="instant-food.jpg", CategoryUrl="cold-drinks-juices"},
@@ -89,16 +89,27 @@ namespace GreenBasket.Models
 
             _products = new List<Product>()
             {
-                new Product() {ProductId = 1, ProductName = "Haldiram's Sev Bhujia", ProductImage = "product-img-1.jpg", CategoryId = 2, CategoryName = "Snack, Munchie", ProductPrice = 24, ProductUrl="haldirams-sev-bhujia"},
-                new Product() {ProductId = 2, ProductName = "NutriChoice Digestive", ProductImage = "product-img-2.jpg", CategoryId = 6, CategoryName = "Bakery & Biscuits", ProductPrice = 24, ProductUrl="nutriChoice-digestive"},
-                new Product() {ProductId = 3, ProductName = "Cadbury 5 Star Chocolate", ProductImage = "product-img-3.jpg", CategoryId = 6, CategoryName = "Bakery & Biscuits", ProductPrice = 24, ProductUrl="cadbury-5-star-chocolate"},
-                new Product() {ProductId = 4, ProductName = "Onion Flavour Potato", ProductImage = "product-img-4.jpg", CategoryId = 2, CategoryName = "Snack, Munchie", ProductPrice = 24, ProductUrl="onion-flavour-potato"},
-                new Product() {ProductId = 5, ProductName = "Salted Instant Popcorn", ProductImage = "product-img-5.jpg", CategoryId = 5, CategoryName = "Instant Food", ProductPrice = 24, ProductUrl="salted-instant-popcorn"},
-                new Product() {ProductId = 6, ProductName = "Blueberry Greek Yogurt", ProductImage = "product-img-6.jpg", CategoryId = 1, CategoryName = "Dairy, Bread & Eggs", ProductPrice = 24, ProductUrl="blueberry-greek-yogurt"},
-                new Product() {ProductId = 7, ProductName = "Britannia Cheese Slices", ProductImage = "product-img-7.jpg", CategoryId = 1, CategoryName = "Dairy, Bread & Eggs", ProductPrice = 24, ProductUrl="britannia-cheese-slices"},
-                new Product() {ProductId = 8, ProductName = "Kellogg's Original Cereals", ProductImage = "product-img-8.jpg", CategoryId = 5, CategoryName = "Instant Food", ProductPrice = 24, ProductUrl="kelloggs-original-cereals"},
-                new Product() {ProductId = 9, ProductName = "Slurrp Millet Chocolate", ProductImage = "product-img-9.jpg", CategoryId = 2, CategoryName = "Snack, Munchie", ProductPrice = 24, ProductUrl="slurrp-millet-chocolate"},
-                new Product() {ProductId = 10, ProductName = "Amul Butter - 500 g", ProductImage = "product-img-10.jpg", CategoryId = 1, CategoryName = "Dairy, Bread & Eggs", ProductPrice = 24, ProductUrl="amul-butter"}
+                new Product() {ProductId = 1, ProductName = "Haldiram's Sev Bhujia", ProductImage = "product-img-1.jpg", CategoryId = 2, ProductPrice = 24, ProductUrl="haldirams-sev-bhujia",
+                Category = _categories.FirstOrDefault(c => c.CategoryId == 1)
+                },
+                new Product() {ProductId = 2, ProductName = "NutriChoice Digestive", ProductImage = "product-img-2.jpg", CategoryId = 6, ProductPrice = 24, ProductUrl="nutriChoice-digestive",
+                Category = _categories.FirstOrDefault(c => c.CategoryId == 6)},
+                new Product() {ProductId = 3, ProductName = "Cadbury 5 Star Chocolate", ProductImage = "product-img-3.jpg", CategoryId = 6, ProductPrice = 24, ProductUrl="cadbury-5-star-chocolate",
+                Category = _categories.FirstOrDefault(c => c.CategoryId == 6)},
+                new Product() {ProductId = 4, ProductName = "Onion Flavour Potato", ProductImage = "product-img-4.jpg", CategoryId = 2, ProductPrice = 24, ProductUrl="onion-flavour-potato",
+                Category = _categories.FirstOrDefault(c => c.CategoryId == 2)},
+                new Product() {ProductId = 5, ProductName = "Salted Instant Popcorn", ProductImage = "product-img-5.jpg", CategoryId = 5, ProductPrice = 24, ProductUrl="salted-instant-popcorn",
+                Category = _categories.FirstOrDefault(c => c.CategoryId == 5)},
+                new Product() {ProductId = 6, ProductName = "Blueberry Greek Yogurt", ProductImage = "product-img-6.jpg", CategoryId = 1, ProductPrice = 24, ProductUrl="blueberry-greek-yogurt",
+                Category = _categories.FirstOrDefault(c => c.CategoryId == 1)},
+                new Product() {ProductId = 7, ProductName = "Britannia Cheese Slices", ProductImage = "product-img-7.jpg", CategoryId = 1, ProductPrice = 24, ProductUrl="britannia-cheese-slices",
+                Category = _categories.FirstOrDefault(c => c.CategoryId == 1)},
+                new Product() {ProductId = 8, ProductName = "Kellogg's Original Cereals", ProductImage = "product-img-8.jpg", CategoryId = 5, ProductPrice = 24, ProductUrl="kelloggs-original-cereals",
+                Category = _categories.FirstOrDefault(c => c.CategoryId == 5)},
+                new Product() {ProductId = 9, ProductName = "Slurrp Millet Chocolate", ProductImage = "product-img-9.jpg", CategoryId = 2, ProductPrice = 24, ProductUrl="slurrp-millet-chocolate",
+                Category = _categories.FirstOrDefault(c => c.CategoryId == 2)},
+                new Product() {ProductId = 10, ProductName = "Amul Butter - 500 g", ProductImage = "product-img-10.jpg", CategoryId = 1, ProductPrice = 24, ProductUrl="amul-butter",
+                Category = _categories.FirstOrDefault(c => c.CategoryId == 1)}
             };
 
             _stores = new List<Store>()
@@ -122,6 +133,10 @@ namespace GreenBasket.Models
                 return _categories;
             }
         }
+        public static Category? GetByUrl(string url)
+        {
+            return _categories.FirstOrDefault(p => p.CategoryUrl == url);
+        }
 
         /*SubCategory*/
         public static List<SubCategory> SubCategories
@@ -144,6 +159,7 @@ namespace GreenBasket.Models
         {
             return _products.FirstOrDefault(p => p.ProductUrl == url);
         }
+
 
         /*Store*/
         public static List<Store> Stores

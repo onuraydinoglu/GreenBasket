@@ -4,7 +4,6 @@ namespace GreenBasket.Models
 {
     public class SubCategory
     {
-        [Key]
         public int SubCategoryId { get; set; }
 
         public string? SubCategoryName { get; set; }
