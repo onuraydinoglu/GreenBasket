@@ -50,8 +50,7 @@
                                 if (item.CategoryId <= 6)
                                 {
                                     <div id="category_@item.CategoryId" class="col-12 col-md-4 col-xl-2 mb-3">
-                                        <a asp-controller="Categories" asp-action="List" asp-route-id="@item.CategoryId"
-                                            class="text-decoration-none text-dark">
+                                        <a asp-controller="Categories" asp-action="List" class="text-decoration-none text-dark">
                                             <div class="card d-flex align-items-center justify-content-center rounded">
                                                 <img src="~/img/categories/@item.CategoryImage" class="pt-4" alt="">
                                                 <div class="card-body mb-4">
@@ -70,7 +69,7 @@
                             {
                                 @if (item.CategoryId >= 7)
                                 {
-                                    <div id="@item.CategoryId" class="col-12 col-md-4 col-xl-2 mb-3">
+                                    <div id="category_@item.CategoryId" class="col-12 col-md-4 col-xl-2 mb-3">
                                         <a class="text-decoration-none text-dark" href="#">
                                             <div class="card d-flex align-items-center justify-content-center">
                                                 <img src="~/img/categories/@item.CategoryImage" class="pt-4" alt="">

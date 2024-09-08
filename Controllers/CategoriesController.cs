@@ -18,13 +18,13 @@ namespace GreenBasket.Controllers
             return View(modelView);
         }
 
-        public IActionResult Details(int? id)
+        public IActionResult Details(string url)
         {
-            if (id == null)
+            if (url == null)
             {
                 return RedirectToAction("Index", "Home");
             }
-            var product = Repository.GetById(id);
+            var product = Repository.GetById(url);
 
             return View(product);
         }
