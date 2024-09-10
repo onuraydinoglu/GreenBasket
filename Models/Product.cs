@@ -12,12 +12,12 @@ namespace GreenBasket.Models
 
         public int ProductPrice { get; set; }
 
+        public bool ProductStok { get; set; }
+
         public string? ProductUrl { get; set; }
 
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
-
-        public List<Category> Categories { get; set; } = new List<Category>();
 
         public int SubCategoryId { get; set; }
         public SubCategory SubCategory { get; set; } = null!;

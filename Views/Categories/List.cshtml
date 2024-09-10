@@ -1,3 +1,5 @@
+@model HomeViewModel
+
 <div class="mt-4">
     <div class="row">
         <div class="col-12">
@@ -21,8 +23,9 @@
 
 <div class="my-4">
     <div class="row">
+        <!-- Category && Store -->
         <div class="col-lg-3">
-
+            <!-- Category List Name -->
             <div class="mb-2">
                 <h5 class="fw-bold">Categories</h5>
                 <div id="categoryCollapseMenu">
@@ -56,7 +59,7 @@
                     </ul>
                 </div>
             </div>
-
+            <!-- Category Store -->
             <div class="mt-5">
                 <h5 class="fw-bold">Stores</h5>
                 <form action="" role="search">
@@ -72,17 +75,18 @@
                     </div>
                 }
             </div>
-
         </div>
 
+        <!-- Category List -->
         <div class="col-12 col-lg-9">
-
+            <!-- Category Title -->
             <div class="bg-light border-0 rounded">
                 <div class="card-body">
                     <h2 class="p-4 fs-1 fw-bold">Dairy, Bread & Eggs</h2>
                 </div>
             </div>
 
+            <!-- Category Selected -->
             <div class="d-flex justify-content-between align-items-center mt-3">
                 <div>
                     <span>
@@ -116,6 +120,7 @@
                 </div>
             </div>
 
+            <!-- Product List -->
             <div class="row">
                 @foreach (var prd in Model.Products)
                 {
@@ -131,11 +136,13 @@
                                     </a>
                                 </div>
                                 <div class="text-small mb-1">
-                                    <a href=""
-                                        class="text-decoration-none text-muted"><small>@prd.Category?.CategoryName</small></a>
+                                    <a class="text-decoration-none text-muted">
+                                        <small>@prd.Category?.CategoryName</small>
+                                    </a>
                                 </div>
                                 <div class="mb-3">
-                                    <a href="" class="text-dark text-decoration-none">@prd.ProductName</a>
+                                    <a href="/product/@prd.ProductUrl"
+                                        class="text-dark text-decoration-none fw-bold">@prd.ProductName</a>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
@@ -153,7 +160,7 @@
                 }
             </div>
 
-
+            <!-- Pagination -->
             <div class="d-flex justify-content-center">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">

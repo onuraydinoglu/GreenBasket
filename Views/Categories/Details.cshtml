@@ -1,5 +1,6 @@
-@model Product
+@model HomeViewModel
 
+<!-- Breadcrumb -->
 <div class="mt-4">
     <div class="row">
         <div class="col-12">
@@ -9,11 +10,11 @@
                         <a asp-controller="Home" asp-action="Index" class="text-decoration-none text-success">Home</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a asp-controller="Categories" asp-action="List"
-                            class="text-decoration-none text-success mx-3">@Model.Category?.CategoryName</a>
+                        <a href="/Category/list"
+                            class="text-decoration-none text-success mx-3">@Model.Product.Category?.CategoryName</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
-                        <span class="ms-3">@Model.ProductName</span>
+                        <span class="ms-3">@Model.Product.ProductName</span>
                     </li>
                 </ol>
             </nav>
@@ -24,34 +25,35 @@
 <div class="my-4">
     <div class="row">
 
+        <!-- Product Image -->
         <div class="col-lg-6 pe-5">
             <div class="row">
                 <div class="col-12">
                     <div class="card rounded mb-3">
                         <div class="d-flex justify-content-center align-items-center"
                             style="height: 400px; cursor: pointer;">
-                            <img src="~/img/products/@Model.ProductImage" alt="" class="img-fluid rounded">
+                            <img src="~/img/products/@Model.Product.ProductImage" alt="" class="img-fluid rounded">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-3">
                             <div class="card">
-                                <img src="~/img/products/@Model.ProductImage" alt="" class="img-fluid rounded">
+                                <img src="~/img/products/@Model.Product.ProductImage" alt="" class="img-fluid rounded">
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="card">
-                                <img src="~/img/products/@Model.ProductImage" alt="" class="img-fluid rounded">
+                                <img src="~/img/products/@Model.Product.ProductImage" alt="" class="img-fluid rounded">
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="card">
-                                <img src="~/img/products/@Model.ProductImage" alt="" class="img-fluid rounded">
+                                <img src="~/img/products/@Model.Product.ProductImage" alt="" class="img-fluid rounded">
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="card">
-                                <img src="~/img/products/@Model.ProductImage" alt="" class="img-fluid rounded">
+                                <img src="~/img/products/@Model.Product.ProductImage" alt="" class="img-fluid rounded">
                             </div>
                         </div>
                     </div>
@@ -59,14 +61,15 @@
             </div>
         </div>
 
-        <div class="col-lg-6 ps-5" id="@Model.ProductId">
+        <!-- Product Name -->
+        <div class="col-lg-6 ps-5" id="@Model.Product.ProductId">
 
             <div class="d-flex flex-column justify-content-between h-100">
                 <div class=" border-bottom pb-4">
-                    <h2 class="fw-bold mb-3">@Model.ProductName</h2>
-                    <h5 class="my-3">@Model.Category?.CategoryName</h5>
+                    <h2 class="fw-bold mb-3">@Model.Product.ProductName</h2>
+                    <h5 class="my-3">@Model.Product.Category?.CategoryName</h5>
                     <div>
-                        <span class="fw-bold fs-4 me-1">$@Model.ProductPrice</span>
+                        <span class="fw-bold fs-4 me-1">$@Model.Product.ProductPrice</span>
                         <span class="text-decoration-line-through text-muted fs-4">$34</span>
                     </div>
                 </div>
@@ -77,7 +80,7 @@
                     <button type="button" class="btn btn-outline-secondary rounded px-3 py-2">1kg</button>
 
                     <div class="mt-5">
-                        <button type="button" class="btn btn-green px-5 py-2 rounded">
+                        <button type="submit" class="btn btn-green px-5 py-2 rounded">
                             <i class="feather-icon icon-shopping-bag me-2"></i>
                             Add to cart
                         </button>
@@ -89,15 +92,15 @@
                         <tbody>
                             <tr>
                                 <td>Product Code:</td>
-                                <td>@Model.ProductId</td>
+                                <td>@Model.Product.ProductId</td>
                             </tr>
                             <tr>
                                 <td>Availability:</td>
-                                <td>In Stock</td>
+                                <td>@(Model.Product.ProductStok ? "In Stock" : "Out Stock")</td>
                             </tr>
                             <tr>
                                 <td>Category:</td>
-                                <td>@Model.Category?.CategoryName</td>
+                                <td>@Model.Product.Category?.CategoryName</td>
                             </tr>
                             <tr>
                                 <td>Shipping:</td>
@@ -115,15 +118,16 @@
     </div>
 </div>
 
+<!-- Product Details -->
 <div class="my-5">
     <div class="row">
         <div class="col-lg-12">
-            <div class="border-bottom">
+            <div class="border-bottom d-flex justify-content-center">
                 <ul class="nav nav-pills nav-lb-tab" id="pills-tab" role="tablist">
                     <li class="nav-item me-4" role="presentation">
-                        <button class="nav-link active" id="product-dateils-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-product-dateils" type="button" role="tab"
-                            aria-controls="pills-product-dateils" aria-selected="true">Product Details</button>
+                        <button class="nav-link active" id="dateils-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-dateils" type="button" role="tab" aria-controls="pills-dateils"
+                            aria-selected="true">Product Details</button>
                     </li>
                     <li class="nav-item me-4" role="presentation">
                         <button class="nav-link" id="information-tab" data-bs-toggle="pill"
@@ -131,20 +135,21 @@
                             aria-controls="pills-information" aria-selected="false">Information</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="return-conditions-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-return-conditions" type="button" role="tab"
-                            aria-controls="pills-return-conditions" aria-selected="false">Return Conditions</button>
+                        <button class="nav-link" id="return-tab" data-bs-toggle="pill" data-bs-target="#pills-return"
+                            type="button" role="tab" aria-controls="pills-return" aria-selected="false">Return
+                            Conditions</button>
                     </li>
                 </ul>
             </div>
             <div class="tab-content mt-5" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-product-dateils" role="tabpanel"
+                <div class="tab-pane fade show active" id="pills-dateils" role="tabpanel"
                     aria-labelledby="product-dateils-tab">
                     <h5 class="fw-bold">
                         Nutrient Value & Benefits
                     </h5>
                     <p class="text-muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum in
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum
+                        in
                         lacus, integer. Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, varius habitant
                         ornare
                         ac rhoncus. Consequat risus facilisis ante ipsum netus risus adipiscing sagittis sed. Lorem
@@ -156,7 +161,8 @@
                         Storage Tips
                     </h5>
                     <p class="text-muted">
-                        Nisi, tellus iaculis urna bibendum in lacus, integer. Id imperdiet vitae varius sed magnis eu
+                        Nisi, tellus iaculis urna bibendum in lacus, integer. Id imperdiet vitae varius sed magnis
+                        eu
                         nisi
                         nunc sit. Vel, varius habitant ornare ac rhoncus. Consequat risus facilisis ante ipsum netus
                         risus
@@ -181,7 +187,8 @@
                         Disclaimer
                     </h5>
                     <p class="text-muted">
-                        Image shown is a representation and may slightly vary from the actual product. Every effort is
+                        Image shown is a representation and may slightly vary from the actual product. Every effort
+                        is
                         made
                         to maintain accuracy of all information displayed.
                     </p>
@@ -224,15 +231,15 @@
                     </p>
                 </div>
 
-                <div class="tab-pane fade" id="pills-return-conditions" role="tabpanel"
-                    aria-labelledby="return-conditions-tab">
+                <div class="tab-pane fade" id="pills-return" role="tabpanel" aria-labelledby="return-conditions-tab">
                     <h5 class="fw-bold">How Can I Start the Return Process?</h5>
                     <p class="text-muted">Lorem ipsum dolor sit amet consectetur,</p>
 
                     <h5 class="fw-bold">Return Policy:</h5>
                     <p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim et soluta
                         reiciendis accusantium </p>
-                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, autem
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
+                        autem
                         vel. Repellendus ea veniam</p>
                     <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod eaque sit
                         repellendus accusamus quos, earum optio saepe, laudantium exercitationem aliquid ut. Dolor
@@ -247,17 +254,21 @@
 
                     <h5 class="fw-bold">Situations where the Right of Withdrawal is not Valid</h5>
                     <ul>
-                        <li class="text-mutedd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor omnis
+                        <li class="text-mutedd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                            omnis
                             incidunt est corporis quod laborum perspiciatis labore minima fugit, aperiam soluta ab
                             accusantium repudiandae odit commodi praesentium, qui inventore! Cumque? </li>
 
-                        <li class="text-mutedd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor omnis
+                        <li class="text-mutedd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                            omnis
                             incidunt est corporis quod laborum perspiciatis labore minima fugit, aperiam soluta ab
                             accusantium repudiandae odit commodi praesentium, qui inventore! Cumque? </li>
-                        <li class="text-mutedd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor omnis
+                        <li class="text-mutedd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                            omnis
                             incidunt est corporis quod laborum perspiciatis labore minima fugit, aperiam soluta ab
                             accusantium repudiandae odit commodi praesentium, qui inventore! Cumque? </li>
-                        <li class="text-mutedd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor omnis
+                        <li class="text-mutedd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+                            omnis
                             incidunt est corporis quod laborum perspiciatis labore minima fugit, aperiam soluta ab
                             accusantium repudiandae odit commodi praesentium, qui inventore! Cumque? </li>
                     </ul>
@@ -268,4 +279,9 @@
     </div>
 </div>
 
-<vc:products-list></vc:products-list>
+<div class="py-5">
+    <h2 class="fw-bold">
+        Related Items
+    </h2>
+    <vc:products-list></vc:products-list>
+</div>

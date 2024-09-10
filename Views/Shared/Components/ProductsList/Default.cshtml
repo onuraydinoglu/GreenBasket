@@ -3,7 +3,7 @@
 <div class="row">
     @foreach (var prd in Model)
     {
-        <div class="col-12 col-md-6 col-lg-4 col-xxl-20 my-4">
+        <div class="col-12 col-md-6 col-lg-3 col-xxl-20 my-4">
             <div class="card rounded">
                 <div class="card-body">
                     <div class="text-center position-relative">
@@ -15,10 +15,11 @@
                         </a>
                     </div>
                     <div class="text-small mb-1">
-                        <a href="" class="text-decoration-none text-muted"><small>@prd.Category?.CategoryName</small></a>
+                        <a class="text-decoration-none text-muted"><small>@prd.Category?.CategoryName</small></a>
                     </div>
                     <div class="mb-3">
-                        <a href="" class="text-dark text-decoration-none">@prd.ProductName</a>
+                        <a href="/product/@prd.ProductUrl"
+                            class="text-dark text-decoration-none fw-bold">@prd.ProductName</a>
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
                         <div>

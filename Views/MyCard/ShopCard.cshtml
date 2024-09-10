@@ -1,0 +1,200 @@
+@model HomeViewModel
+
+<!-- Breadcrumb -->
+<div class="mt-4">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item me-3">
+                        <a asp-controller="Home" asp-action="Index" class="text-decoration-none text-success">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="/Category/list" class="text-decoration-none text-success mx-3">Shop</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span class="ms-3">Shop Card</span>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- Shop Card -->
+<section class="my-5">
+    <!-- Card Title -->
+    <div class="row">
+        <div class="col-12">
+            <h2 class="fw-bold">Shop Card</h2>
+        </div>
+    </div>
+
+    <!-- Shop Card List -->
+    <div class="row mt-4">
+        <div class="col-12 col-lg-8 mb-5">
+            <!-- Card List Group-->
+            <ul class="list-group rounded">
+                <!-- List Group Item -->
+                <li class="list-group-item py-3 pe-4">
+                    <div class="row align-items-center">
+                        <div class="col-7 col-lg-7">
+                            <div class="d-flex align-items-center">
+                                <img src="~/img/products/product-img-1.jpg" alt="" style="width: 75px;">
+                                <div class="d-flex flex-column justify-content-between" style="height: 50px;">
+                                    <a href="#" class="text-decoration-none text-dark">Blueberry Greek Yogurt</a>
+                                    <div class="">
+                                        <i class="bi bi-trash pe-1"></i>
+                                        <span class="text-muted">Remove</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 col-lg-3">Count</div>
+                        <div class="col-2 col-lg-2 text-end">
+                            <div class="d-flex flex-column">
+                                <span class="fw-bold">
+                                    $25.00
+                                </span>
+                                <span class="text-muted text-decoration-line-through">
+                                    <small>
+                                        $34.00
+                                    </small>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item py-3 pe-4">
+                    <div class="row align-items-center">
+                        <div class="col-7 col-lg-7">
+                            <div class="d-flex align-items-center">
+                                <img src="~/img/products/product-img-1.jpg" alt="" style="width: 75px;">
+                                <div class="d-flex flex-column justify-content-between" style="height: 50px;">
+                                    <a href="#" class="text-decoration-none text-dark">Blueberry Greek Yogurt</a>
+                                    <div class="">
+                                        <i class="bi bi-trash pe-1"></i>
+                                        <span class="text-muted">Remove</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 col-lg-3">Count</div>
+                        <div class="col-2 col-lg-2 text-end">
+                            <div class="d-flex flex-column">
+                                <span class="fw-bold">
+                                    $25.00
+                                </span>
+                                <span class="text-muted text-decoration-line-through">
+                                    <small>
+                                        $34.00
+                                    </small>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item py-3 pe-4">
+                    <div class="row align-items-center">
+                        <div class="col-7 col-lg-7">
+                            <div class="d-flex align-items-center">
+                                <img src="~/img/products/product-img-1.jpg" alt="" style="width: 75px;">
+                                <div class="d-flex flex-column justify-content-between" style="height: 50px;">
+                                    <a href="#" class="text-decoration-none text-dark">Blueberry Greek Yogurt</a>
+                                    <div class="">
+                                        <i class="bi bi-trash pe-1"></i>
+                                        <span class="text-muted">Remove</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 col-lg-3">Count</div>
+                        <div class="col-2 col-lg-2 text-end">
+                            <div class="d-flex flex-column">
+                                <span class="fw-bold">
+                                    $25.00
+                                </span>
+                                <span class="text-muted text-decoration-line-through">
+                                    <small>
+                                        $34.00
+                                    </small>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Payment -->
+        <div class="col-12 col-lg-4">
+            <div class="border rounded">
+                <div class="card-body py-4">
+                    <!-- Cart Title -->
+                    <div class="border-bottom pb-2">
+                        <h5 class="card-title">Summary
+                            <span class="float-end d-block">3 Product</span>
+                        </h5>
+                    </div>
+
+                    <!-- Payment -->
+                    <div class="border-bottom">
+                        <div class="my-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Item Subtotal</span>
+                                <span>$70.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Service Fee</span>
+                                <span>$7.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subtotal -->
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Subtotal</span>
+                            <span>$77.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="mt-3">
+                        <button class="btn btn-green rounded w-100 py-2" type="submit">Go To Checkout</button>
+                    </div>
+
+                    <!-- Policy -->
+                    <div class="mt-3">
+                        <small>By placing your order, you agree to be bound by the GreenCard
+                            <a href="#" class="text-decoration-none text-success"><small>Terms of Service</small></a>
+                            and
+                            <a href="#" class="text-decoration-none text-success"><small>Privacy Policy.</small></a>
+                        </small>
+                    </div>
+
+                    <!-- Promo or Gift Card -->
+                    <div class="mt-5">
+                        <h5 class="card-title">Add Promo or Gift Card</h5>
+                        <div class="mt-3">
+                            <form>
+                                <div class="mb-2">
+                                    <label for="giftCard" class="form-label">Email Address</label>
+                                    <input type="text" class="form-control rounded" placeholder="Promo or Gift Card"
+                                        id="giftCard">
+                                    <div class="mt-3">
+                                        <button class="btn btn-outline-dark rounded w-100 py-2"
+                                            type="submit">Redeem</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <small class="text-muted">Terms & Conditions apply</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>

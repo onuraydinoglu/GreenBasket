@@ -7,8 +7,7 @@ namespace GreenBasket.Controllers
     {
         public IActionResult List(string url)
         {
-            var category = Repository.GetByUrl(url);
-
+            var category = Repository.GetCategoryByUrl(url);
             var products = Repository.Products;
 
             if (category != null)
@@ -33,9 +32,20 @@ namespace GreenBasket.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-            var product = Repository.GetById(url);
+            var product = Repository.GetProductByUrl(url);
 
-            return View(product);
+            var model = new HomeViewModel
+            {
+                Categories = Repository.Categories,
+                Product = product
+            };
+
+            return View(model);
         }
+
+
+
+
+
     }
 }
