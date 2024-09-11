@@ -32,7 +32,7 @@
     </button>
 </section>
 
-<section class="my-5">
+<section class="my-10">
     <h3 class="mb-4">Featured Categories</h3>
     <div class="row">
         <div class="col-md-12">
@@ -91,7 +91,7 @@
     </div>
 </section>
 
-<section class="my-5">
+<section class="my-10">
     <div class="row">
         <div class="col-12 col-md-6 mb-3">
             <div class="py-10 px-8 rounded"
@@ -116,13 +116,13 @@
     </div>
 </section>
 
-<section class="my-5">
+<section class="my-10">
     <h3 class="mb-4">Popular Products</h3>
     <vc:products-list></vc:products-list>
 
 </section>
 
-<section class="my-5">
+<section class="my-10">
     <h3 class="fw-bold mb-4">Best Sales of the Week</h3>
     <div class="row">
         <div class="col-lg-6 col-xl-3 mb-2">
@@ -141,11 +141,11 @@
 
         @foreach (var item in Model.Products)
         {
-            if (item.ProductId >= 8)
+            if (item.ProductId <= 3)
             {
                 <div class="col-lg-6 col-xl-3">
                     <div class="card rounded">
-                        <div class="card-body">
+                        <div class="card-body" id="@item.ProductId">
                             <div class="text-center">
                                 <a href="#">
                                     <img src="~/img/products/@item.ProductImage" alt="">
@@ -209,7 +209,7 @@
     </div>
 </section>
 
-<section class="my-5">
+<section class="my-10">
     <div class="row">
         <div class="col-md-6 col-lg-3">
             <div class="mb-3">

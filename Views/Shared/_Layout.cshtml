@@ -38,10 +38,12 @@
                             </a>
                         </div>
                         <div class="list-inline-item me-3">
-                            <a class="text-decoration-none text-dark me-3 d-none d-lg-block" href="/">Register</a>
+                            <a class="text-decoration-none text-dark me-3 d-none d-lg-block" asp-controller="Users"
+                                asp-action="Register">Register</a>
                         </div>
                         <div class="list-inline-item">
-                            <button class="btn btn-dark rounded d-none d-lg-block" href="/">Sign In</button>
+                            <a class="btn btn-dark rounded d-none d-lg-block" asp-controller="Users"
+                                asp-action="Login">Sign In</a>
                         </div>
                         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -328,7 +330,8 @@
                                 <a href="" class="btn btn-sm btn-social rounded"><i class="bi bi-facebook"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="" class="btn btn-sm btn-social rounded"><i class="bi bi-twitter"></i></a>
+                                <a href="" class="btn btn-sm btn-social rounded"><i
+                                        class="fa-brands fa-x-twitter"></i></a>
                             </li>
                             <li class="list-inline-item">
                                 <a href="" class="btn btn-sm btn-social rounded"><i class="bi bi-instagram"></i></a>

@@ -181,6 +181,10 @@
       "PackagePath": "staticwebassets\\img\\s3.jpg"
     },
     {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\users\\signup-g.svg",
+      "PackagePath": "staticwebassets\\img\\users\\signup-g.svg"
+    },
+    {
       "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

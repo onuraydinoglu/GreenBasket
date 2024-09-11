@@ -107,6 +107,14 @@ a:hover{
               -2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.my-10{
+  margin: 6rem 0;
+}
+
+.mb-10{
+  margin-bottom: 6rem;
+}
+
 .py-9{
   padding-top: 25px;
 }

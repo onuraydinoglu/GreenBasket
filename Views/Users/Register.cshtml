@@ -1,0 +1,40 @@
+@model HomeViewModel
+
+<div class="container my-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-6 col-lg-5">
+            <img src="~/img/users/signup-g.svg" alt="">
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <h2 class="fw-bold">Get Start Shopping</h2>
+            <span class="text-muted">Welcome to FreshCart! Enter your email to get started.</span>
+            <div class="mt-4">
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control rounded" id="fName" placeholder="First name">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control rounded" id="lname" placeholder="Last name">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control rounded" id="email" placeholder="Email">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input type="password" class="form-control rounded" id="password" placeholder="*****">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <button type="submit" class="btn btn-green rounded py-2 w-100">Register</button>
+                        </div>
+                        <small class="mt-2">By continuing, you agree to our
+                            <a href="#" class="text-decoration-none text-success"><small>Terms of Service</small></a>
+                            and
+                            <a href="#" class="text-decoration-none text-success"><small>Privacy Policy.</small></a>
+                        </small>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

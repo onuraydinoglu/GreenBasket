@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "g8GJt+aN08MLB+Fb/2EyMHwKeV7QViibsIby8Ki06fc=",
+  "Hash": "C8Ttxasz99D8VKSfcQT3E89qkV5CcZvwmRzLiFqTHP4=",
   "Source": "GreenBasket",
   "BasePath": "_content/GreenBasket",
   "Mode": "Default",
@@ -889,6 +889,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\s3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\users\\signup-g.svg",
+      "SourceId": "GreenBasket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\",
+      "BasePath": "_content/GreenBasket",
+      "RelativePath": "img/users/signup-g.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\users\\signup-g.svg"
     },
     {
       "Identity": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\js\\site.js",
