@@ -1,0 +1,39 @@
+<a class="navbar-brand" asp-controller="Home" asp-action="Index">
+    <i class="bi bi-cart-check"></i>
+    <span class="text-dark fw-bold mb-3 display-7">GreenBasket</span>
+</a>
+<ul class="nav flex-column nav-drk-pills mt-3">
+    <li class="nav-item mt-3 mb-4">
+        <a href="/Admin/Index" class="nav-link py-3" id="dashboard-link">
+            <i class="bi bi-house me-2"></i>
+            Dashboard
+        </a>
+    </li>
+    <li class="nav-item my-3">
+        <span class="nav-label">Store Managements</span>
+    </li>
+    <li class="nav-item mb-2">
+        <a href="/Admin/Product" class="nav-link py-3" id="product-link">
+            <i class="bi bi-cart me-2"></i>
+            Product
+        </a>
+    </li>
+    <li class="nav-item mb-2">
+        <a href="/Admin/Category" class="nav-link py-3" id="category-link">
+            <i class="bi bi-list-task me-2"></i>
+            Category
+        </a>
+    </li>
+</ul>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let currentPage = window.location.pathname;
+
+        document.querySelectorAll('.nav-drk-pills .nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>

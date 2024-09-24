@@ -69,8 +69,16 @@
       "PackagePath": "staticwebassets\\img\\pay\\american-express.svg"
     },
     {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\pay\\americanexpress.svg",
+      "PackagePath": "staticwebassets\\img\\pay\\americanexpress.svg"
+    },
+    {
       "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\pay\\appstore-btn.svg",
       "PackagePath": "staticwebassets\\img\\pay\\appstore-btn.svg"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\pay\\discover.svg",
+      "PackagePath": "staticwebassets\\img\\pay\\discover.svg"
     },
     {
       "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\pay\\googleplay-btn.svg",
@@ -81,12 +89,24 @@
       "PackagePath": "staticwebassets\\img\\pay\\mastercard.svg"
     },
     {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\pay\\mastercard1.svg",
+      "PackagePath": "staticwebassets\\img\\pay\\mastercard1.svg"
+    },
+    {
       "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\pay\\paypal.svg",
       "PackagePath": "staticwebassets\\img\\pay\\paypal.svg"
     },
     {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\pay\\paypal1.svg",
+      "PackagePath": "staticwebassets\\img\\pay\\paypal1.svg"
+    },
+    {
       "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\pay\\visa.svg",
       "PackagePath": "staticwebassets\\img\\pay\\visa.svg"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\pay\\visa1.svg",
+      "PackagePath": "staticwebassets\\img\\pay\\visa1.svg"
     },
     {
       "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\products\\product-img-1.jpg",
@@ -179,6 +199,14 @@
     {
       "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\s3.jpg",
       "PackagePath": "staticwebassets\\img\\s3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\users\\profile.png",
+      "PackagePath": "staticwebassets\\img\\users\\profile.png"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\users\\signin-g.svg",
+      "PackagePath": "staticwebassets\\img\\users\\signin-g.svg"
     },
     {
       "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\users\\signup-g.svg",

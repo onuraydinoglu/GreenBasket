@@ -3,33 +3,29 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GreenBasket.Controllers
 {
-    public class UsersController : Controller
+    public class AdminController : Controller
     {
-        public IActionResult Register()
-        {
-            var model = new HomeViewModel
-            {
-                Categories = Repository.Categories
-            };
-
-            return View(model);
-        }
-
-        public IActionResult Login()
-        {
-            var model = new HomeViewModel
-            {
-                Categories = Repository.Categories
-            };
-            return View(model);
-        }
-
         public IActionResult Index()
         {
             var model = new HomeViewModel
             {
-                Categories = Repository.Categories,
-                Products = Repository.Products
+                Categories = Repository.Categories
+            };
+            return View(model);
+        }
+        public IActionResult Product()
+        {
+            var model = new HomeViewModel
+            {
+                Categories = Repository.Categories
+            };
+            return View(model);
+        }
+        public IActionResult Category()
+        {
+            var model = new HomeViewModel
+            {
+                Categories = Repository.Categories
             };
             return View(model);
         }

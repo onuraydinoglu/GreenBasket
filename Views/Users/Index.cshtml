@@ -1,0 +1,329 @@
+@model HomeViewModel
+
+<section class="my-5">
+    <div class="my-5">
+        <div class="row">
+            <div class="d-flex align-items-start">
+                <div class="col-lg-3 pe-5">
+                    <div class="nav flex-column nav-pills me-3 border-bottom pb-4" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <button class="nav-link nav-lb-pills active rounded text-start" id="v-pills-home-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab"
+                            aria-controls="v-pills-home" aria-selected="true">
+                            <i class="bi bi-basket me-2"></i>Your Orders
+                        </button>
+                        <button class="nav-link nav-lb-pills rounded text-start" id="v-pills-profile-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab"
+                            aria-controls="v-pills-profile" aria-selected="false">
+                            <i class="bi bi-gear me-2"></i>Settings
+                        </button>
+                        <button class="nav-link nav-lb-pills rounded text-start" id="v-pills-messages-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab"
+                            aria-controls="v-pills-messages" aria-selected="false">
+                            <i class="bi bi-geo-alt me-2"></i>Address
+                        </button>
+                        <button class="nav-link nav-lb-pills rounded text-start" id="v-pills-settings-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab"
+                            aria-controls="v-pills-settings" aria-selected="false">
+                            <i class="bi bi-credit-card me-2"></i>Payment Method
+                        </button>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="nav-link nav-lb-pills rounded text-start">
+                            <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+                            Log Out
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 ps-5">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                            aria-labelledby="v-pills-home-tab">
+                            <div class="mb-5">
+                                <h5 class="fw-bold">Your Orders</h5>
+                            </div>
+                            <div>
+                                <table class="table">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Order</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Items</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var prd in Model.Products)
+                                        {
+                                            if (@prd.ProductId <= 7)
+                                            {
+                                                <tr>
+                                                    <td><img src="~/img/products/@prd.ProductImage" alt="" style="width: 50px;">
+                                                    </td>
+                                                    <td>@prd.ProductName</td>
+                                                    <td>#14899</td>
+                                                    <td>March 5, 2023</td>
+                                                    <td>1</td>
+                                                    <td>Completed</td>
+                                                    <td>$@prd.ProductPrice</td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                            aria-labelledby="v-pills-profile-tab">
+                            <div class="border-bottom pb-4">
+                                <h4 class="fw-bold">Account Setting</h4>
+                                <div class="my-5">
+                                    <h5 class="fw-bold mb-4">Account details</h5>
+                                    <form>
+                                        <div class="my-3">
+                                            <label for="name" class="form-label">Name</label>
+                                            <input type="text" class="form-control rounded w-50" id="name"
+                                                placeholder="Onur">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control rounded w-50" id="email"
+                                                placeholder="info@onur.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">Phone</label>
+                                            <input type="text" class="form-control rounded w-50" id="phone"
+                                                placeholder="545 987 65 43">
+                                        </div>
+                                        <button type="submit" class="btn btn-green rounded py-2 px-4">Save
+                                            Details</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="pt-4">
+                                <div class="mt-5">
+                                    <h5 class="fw-bold mb-4">Password</h5>
+                                    <form>
+                                        <div class="row">
+                                            <div class="col mb-3">
+                                                <label for="password" class="form-label">New Password</label>
+                                                <input type="password" class="form-control rounded" id="password"
+                                                    placeholder="*********">
+                                            </div>
+                                            <div class="col mb-3">
+                                                <label for="currentPassword" class="form-label">Current Password</label>
+                                                <input type="password" class="form-control rounded" id="currentPassword"
+                                                    placeholder="*********">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-green rounded py-2 px-4">
+                                            Save Password
+                                        </button>
+                                        <p class="mt-2">
+                                            Can’t remember your current password?
+                                            <a href="#" class="text-decoration-none text-success">Reset your
+                                                password.</a>
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                            aria-labelledby="v-pills-messages-tab">
+                            <div class="">
+                                <div class="d-flex justify-content-between mb-4">
+                                    <h5 class="fw-bold">Address</h5>
+                                    <a href="#" class="btn btn-outline-success rounded">Add a new address</a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="border rounded">
+                                            <div class="card-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="address"
+                                                        id="address" checked>
+                                                    <label class="form-check-label" for="address">
+                                                        Home
+                                                    </label>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <p class="mb-1">Jitu Chauhan</p>
+                                                    <p class="mb-1">4450 North Avenue Oakland, Nebraska, United States
+                                                    </p>
+                                                    <p>402-776-1106</p>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="#" class="btn btn-green btn-sm rounded">Default
+                                                        Address</a>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <span class="me-4">
+                                                        <a href="#" class="text-decoration-none text-success">
+                                                            Edit
+                                                        </a>
+                                                    </span>
+                                                    <span>
+                                                        <a href="#" class="text-decoration-none text-danger">
+                                                            Delete
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="border rounded">
+                                            <div class="card-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="address"
+                                                        id="address">
+                                                    <label class="form-check-label" for="address">
+                                                        Office
+                                                    </label>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <p class="mb-1">Nitu Chauhan</p>
+                                                    <p class="mb-1">
+                                                        3853 Coal Road Tannersville, Pennsylvania, 18372, United States
+                                                    </p>
+                                                    <p>402-776-1106</p>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href="#" class="link-success text-decoration-none">Set as
+                                                        Default</a>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <span class="me-4">
+                                                        <a href="#" class="text-decoration-none text-success">
+                                                            Edit
+                                                        </a>
+                                                    </span>
+                                                    <span>
+                                                        <a href="#" class="text-decoration-none text-danger">
+                                                            Delete
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                            aria-labelledby="v-pills-settings-tab">
+                            <div class="d-flex justify-content-between mb-4">
+                                <h5 class="fw-bold">Payment Methods</h5>
+                                <a href="#" class="btn btn-outline-success rounded">Add Payment</a>
+                            </div>
+                            <div class="my-4">
+                                <ul class="list-group list-group-flush">
+                                    <!-- List group item -->
+                                    <li class="list-group-item px-0 py-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex">
+                                                <!-- img -->
+                                                <img src="~/img/pay/visa1.svg" alt="" />
+                                                <!-- text -->
+                                                <div class="ms-4">
+                                                    <h5 class="mb-0 h6">**** 1234</h5>
+                                                    <p class="mb-0 small">Expires in 10/2023</p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <!-- button -->
+                                                <a href="#" class="btn btn-outline-secondary disabled btn-sm">Remove</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group item -->
+                                    <li class="list-group-item px-0 py-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex">
+                                                <!-- img -->
+                                                <img src="~/img/pay/mastercard1.svg" alt="" class="me-3" />
+                                                <div>
+                                                    <h5 class="mb-0 h6">Mastercard ending in 1234</h5>
+                                                    <p class="mb-0 small">Expires in 03/2026</p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <!-- button-->
+                                                <a href="#"
+                                                    class="btn btn-outline-secondary text-muted btn-sm">Remove</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group item -->
+                                    <li class="list-group-item px-0 py-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex">
+                                                <!-- img -->
+                                                <img src="~/img/pay/discover.svg" alt="" class="me-3" />
+                                                <div>
+                                                    <!-- text -->
+                                                    <h5 class="mb-0 h6">Discover ending in 1234</h5>
+                                                    <p class="mb-0 small">
+                                                        Expires in 07/2020
+                                                        <span class="badge bg-warning text-dark">This card is
+                                                            expired.</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <!-- btn -->
+                                                <a href="#"
+                                                    class="btn btn-outline-secondary text-muted btn-sm">Remove</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group item -->
+                                    <li class="list-group-item px-0 py-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex">
+                                                <!-- img -->
+                                                <img src="~/img/pay/americanexpress.svg" alt="" class="me-3" />
+                                                <!-- text -->
+                                                <div>
+                                                    <h5 class="mb-0 h6">American Express ending in 1234</h5>
+                                                    <p class="mb-0 small">Expires in 12/2021</p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <!-- btn -->
+                                                <a href="#"
+                                                    class="btn btn-outline-secondary text-muted btn-sm">Remove</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group item -->
+                                    <li class="list-group-item px-0 py-3 border-bottom">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex">
+                                                <!-- img -->
+                                                <img src="~/img/pay/paypal1.svg" alt="" class="me-3" />
+                                                <div>
+                                                    <!-- text -->
+                                                    <h5 class="mb-0 h6">Paypal Express ending in 1234</h5>
+                                                    <p class="mb-0 small">Expires in 10/2021</p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <!-- btn -->
+                                                <a href="#"
+                                                    class="btn btn-outline-secondary text-muted btn-sm">Remove</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

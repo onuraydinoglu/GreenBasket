@@ -1,51 +1,44 @@
 using GreenBasket.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GreenBasket.Controllers
+namespace GreenBasket.Controllers;
+public class CategoriesController : Controller
 {
-    public class CategoriesController : Controller
+    public IActionResult List(string url)
     {
-        public IActionResult List(string url)
+        var category = Repository.GetCategoryByUrl(url);
+        var products = Repository.Products;
+
+        if (category != null)
         {
-            var category = Repository.GetCategoryByUrl(url);
-            var products = Repository.Products;
-
-            if (category != null)
-            {
-                products = products.Where(p => p.CategoryId == category.CategoryId).ToList();
-            }
-
-            var modelView = new HomeViewModel
-            {
-                Categories = Repository.Categories,
-                SubCategories = Repository.SubCategories,
-                Products = products,
-                Stores = Repository.Stores
-            };
-
-            return View(modelView);
+            products = products.Where(p => p.CategoryId == category.CategoryId).ToList();
         }
 
-        public IActionResult Details(string url)
+        var modelView = new HomeViewModel
         {
-            if (url == null)
-            {
-                return RedirectToAction("Index", "Home");
-            }
-            var product = Repository.GetProductByUrl(url);
+            Categories = Repository.Categories,
+            SubCategories = Repository.SubCategories,
+            Products = products,
+            Stores = Repository.Stores
+        };
 
-            var model = new HomeViewModel
-            {
-                Categories = Repository.Categories,
-                Product = product
-            };
+        return View(modelView);
+    }
 
-            return View(model);
+    public IActionResult Details(string url)
+    {
+        if (url == null)
+        {
+            return RedirectToAction("Index", "Home");
         }
+        var product = Repository.GetProductByUrl(url);
 
+        var model = new HomeViewModel
+        {
+            Categories = Repository.Categories,
+            Product = product
+        };
 
-
-
-
+        return View(model);
     }
 }
