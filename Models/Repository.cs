@@ -6,6 +6,7 @@ namespace GreenBasket.Models
         private static readonly List<SubCategory> _subcategories = new();
         private static readonly List<Product> _products = new();
         private static readonly List<Store> _stores = new();
+        private static readonly List<Address> _address = new();
 
         static Repository()
         {
@@ -16,49 +17,56 @@ namespace GreenBasket.Models
                     CategoryId = 1,
                     CategoryName = "Dairy, Bread & Eggs",
                     CategoryImage = "dairy-bread-eggs.jpg",
-                    CategoryUrl = "dairy-bread-eggs"
+                    CategoryUrl = "dairy-bread-eggs",
+                    CategoryStatus = true
                 },
                 new Category()
                 {
                     CategoryId = 2,
                     CategoryName = "Snack, Munchie",
                     CategoryImage = "snack-munchies.jpg",
-                    CategoryUrl = "snack-munchie"
+                    CategoryUrl = "snack-munchie",
+                    CategoryStatus = true
                 },
                 new Category()
                 {
                     CategoryId = 3,
                     CategoryName = "Fruits & Vegetables",
                     CategoryImage = "bakery-biscuits.jpg",
-                    CategoryUrl = "fruits-vegetables"
+                    CategoryUrl = "fruits-vegetables",
+                    CategoryStatus = true
                 },
                 new Category()
                 {
                     CategoryId = 4,
                     CategoryName = "Cold Drinks & Juices",
                     CategoryImage = "instant-food.jpg",
-                    CategoryUrl = "cold-drinks-juices"
+                    CategoryUrl = "cold-drinks-juices",
+                    CategoryStatus = false
                 },
                 new Category()
                 {
                     CategoryId = 5,
                     CategoryName = "Breakfast & Instant Food",
                     CategoryImage = "tea-coffee-drinks.jpg",
-                    CategoryUrl = "Breakfast-instant-food"
+                    CategoryUrl = "Breakfast-instant-food",
+                    CategoryStatus = true
                 },
                 new Category()
                 {
                     CategoryId = 6,
                     CategoryName = "Bakery & Biscuits",
                     CategoryImage = "bakery-biscuits.jpg",
-                    CategoryUrl = "bakery-biscuits"
+                    CategoryUrl = "bakery-biscuits",
+                    CategoryStatus = false
                 },
                 new Category()
                 {
                     CategoryId = 7,
                     CategoryName = "Chicken, Meat & Fish",
                     CategoryImage = "chicken-meat-fish.jpg",
-                    CategoryUrl = "chicken-meat-fish"
+                    CategoryUrl = "chicken-meat-fish",
+                    CategoryStatus = true
                 }
             };
 
@@ -139,6 +147,7 @@ namespace GreenBasket.Models
                     CategoryId = 2,
                     ProductPrice = 24,
                     ProductStok = false,
+                    ProductIsHome = true,
                     ProductUrl = "haldirams-sev-bhujia",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 2)
                 },
@@ -150,6 +159,7 @@ namespace GreenBasket.Models
                     CategoryId = 6,
                     ProductPrice = 24,
                     ProductStok = true,
+                    ProductIsHome = true,
                     ProductUrl = "nutriChoice-digestive",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 6)
                 },
@@ -161,6 +171,7 @@ namespace GreenBasket.Models
                     CategoryId = 6,
                     ProductPrice = 24,
                     ProductStok = true,
+                    ProductIsHome = true,
                     ProductUrl = "cadbury-5-star-chocolate",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 6)
                 },
@@ -172,6 +183,7 @@ namespace GreenBasket.Models
                     CategoryId = 2,
                     ProductPrice = 24,
                     ProductStok = true,
+                    ProductIsHome = true,
                     ProductUrl = "onion-flavour-potato",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 2)
                 },
@@ -183,6 +195,7 @@ namespace GreenBasket.Models
                     CategoryId = 5,
                     ProductPrice = 24,
                     ProductStok = true,
+                    ProductIsHome = true,
                     ProductUrl = "salted-instant-popcorn",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 5)
                 },
@@ -194,6 +207,7 @@ namespace GreenBasket.Models
                     CategoryId = 1,
                     ProductPrice = 24,
                     ProductStok = false,
+                    ProductIsHome = true,
                     ProductUrl = "blueberry-greek-yogurt",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 1)
                 },
@@ -205,6 +219,7 @@ namespace GreenBasket.Models
                     CategoryId = 1,
                     ProductPrice = 24,
                     ProductStok = true,
+                    ProductIsHome = true,
                     ProductUrl = "britannia-cheese-slices",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 1)
                 },
@@ -216,6 +231,7 @@ namespace GreenBasket.Models
                     CategoryId = 5,
                     ProductPrice = 24,
                     ProductStok = true,
+                    ProductIsHome = true,
                     ProductUrl = "kelloggs-original-cereals",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 5)
                 },
@@ -227,6 +243,7 @@ namespace GreenBasket.Models
                     CategoryId = 2,
                     ProductPrice = 24,
                     ProductStok = true,
+                    ProductIsHome = true,
                     ProductUrl = "slurrp-millet-chocolate",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 2)
                 },
@@ -238,6 +255,7 @@ namespace GreenBasket.Models
                     CategoryId = 1,
                     ProductPrice = 24,
                     ProductStok = true,
+                    ProductIsHome = true,
                     ProductUrl = "amul-butter",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 1)
                 },
@@ -249,6 +267,7 @@ namespace GreenBasket.Models
                     CategoryId = 2,
                     ProductPrice = 24,
                     ProductStok = false,
+                    ProductIsHome = false,
                     ProductUrl = "haldirams-sev-bhujia",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 2)
                 },
@@ -260,6 +279,7 @@ namespace GreenBasket.Models
                     CategoryId = 2,
                     ProductPrice = 15,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "lays-classic-potato-chips",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 2)
                 },
@@ -271,6 +291,7 @@ namespace GreenBasket.Models
                     CategoryId = 6,
                     ProductPrice = 5,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "ulker-chocolate-wafer",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 6)
                 },
@@ -282,6 +303,7 @@ namespace GreenBasket.Models
                     CategoryId = 1,
                     ProductPrice = 12,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "sutas-milk-1l",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 1)
                 },
@@ -293,6 +315,7 @@ namespace GreenBasket.Models
                     CategoryId = 4,
                     ProductPrice = 8,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "cappy-mixed-fruit-juice-1l",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 4)
                 },
@@ -304,6 +327,7 @@ namespace GreenBasket.Models
                     CategoryId = 6,
                     ProductPrice = 6,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "eti-burcak-biscuit",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 6)
                 },
@@ -315,6 +339,7 @@ namespace GreenBasket.Models
                     CategoryId = 6,
                     ProductPrice = 4,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "pinar-olive-bread",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 6)
                 },
@@ -326,6 +351,7 @@ namespace GreenBasket.Models
                     CategoryId = 7,
                     ProductPrice = 25,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "banvit-chicken-breast",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 7)
                 },
@@ -337,6 +363,7 @@ namespace GreenBasket.Models
                     CategoryId = 4,
                     ProductPrice = 7,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "coca-cola-1l",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 4)
                 },
@@ -348,6 +375,7 @@ namespace GreenBasket.Models
                     CategoryId = 4,
                     ProductPrice = 7,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "pepsi-1l",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 4)
                 },
@@ -359,6 +387,7 @@ namespace GreenBasket.Models
                     CategoryId = 2,
                     ProductPrice = 10,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "doritos-nacho-cheese",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 2)
                 },
@@ -370,6 +399,7 @@ namespace GreenBasket.Models
                     CategoryId = 2,
                     ProductPrice = 12,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "pringles-sour-cream-onion",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 2)
                 },
@@ -381,6 +411,7 @@ namespace GreenBasket.Models
                     CategoryId = 4,
                     ProductPrice = 9,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "tropicana-orange-juice-1l",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 4)
                 },
@@ -392,6 +423,7 @@ namespace GreenBasket.Models
                     CategoryId = 1,
                     ProductPrice = 20,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "alpro-almond-milk-1l",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 1)
                 },
@@ -403,6 +435,7 @@ namespace GreenBasket.Models
                     CategoryId = 5,
                     ProductPrice = 6,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "knorr-tomato-soup",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 5)
                 },
@@ -414,6 +447,7 @@ namespace GreenBasket.Models
                     CategoryId = 4,
                     ProductPrice = 5,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "lipton-ice-tea-lemon-500ml",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 4)
                 },
@@ -425,6 +459,7 @@ namespace GreenBasket.Models
                     CategoryId = 5,
                     ProductPrice = 6,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "knorr-chicken-soup",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 5)
                 },
@@ -436,6 +471,7 @@ namespace GreenBasket.Models
                     CategoryId = 3,
                     ProductPrice = 20,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "fresh-apples",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 3)
                 },
@@ -447,6 +483,7 @@ namespace GreenBasket.Models
                     CategoryId = 3,
                     ProductPrice = 15,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "fresh-bananas",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 3)
                 },
@@ -458,20 +495,22 @@ namespace GreenBasket.Models
                     CategoryId = 5,
                     ProductPrice = 7,
                     ProductStok = true,
+                    ProductIsHome = false,
                     ProductUrl = "knorr-vegetable-soup",
                     Category = _categories.FirstOrDefault(c => c.CategoryId == 5)
                 },
                 new Product()
-            {
-                ProductId = 31,
-                ProductName = "Fresh Tomatoes",
-                ProductImage = "product-img-16.jpg", // Aynı görseli tekrar kullanabilirsiniz
-                CategoryId = 3,
-                ProductPrice = 12,
-                ProductStok = true,
-                ProductUrl = "fresh-tomatoes",
-                Category = _categories.FirstOrDefault(c => c.CategoryId == 3)
-            }
+                {
+                    ProductId = 31,
+                    ProductName = "Fresh Tomatoes",
+                    ProductImage = "product-img-16.jpg", // Aynı görseli tekrar kullanabilirsiniz
+                    CategoryId = 3,
+                    ProductPrice = 12,
+                    ProductStok = true,
+                    ProductIsHome = false,
+                    ProductUrl = "fresh-tomatoes",
+                    Category = _categories.FirstOrDefault(c => c.CategoryId == 3)
+                }
             };
 
             _stores = new List<Store>()
@@ -485,6 +524,31 @@ namespace GreenBasket.Models
                 new Store() {StoreId = 7, StoreName ="Spencers"},
                 new Store() {StoreId = 8, StoreName ="Online Grocery"}
             };
+            _address = new List<Address>()
+            {
+                new Address()
+                {
+                    Id = 1,
+                    FullName = "Jitu Chauhan",
+                    Number = 05459876543,
+                    Addres = "4450 North Avenue Oakland",
+                    District = "Nebraska",
+                    City = "United States",
+                    PostalCode = 402-776-1106
+                },
+                new Address()
+                {
+                    Id = 2,
+                    FullName = "Nitu Chauhan",
+                    Number = 05459876543,
+                    Addres = "3853 Coal Road Tannersville",
+                    District = "Pennsylvania",
+                    City = "United States",
+                    PostalCode = 402-776-1106
+                }
+            };
+
+
         }
 
         /*Category*/

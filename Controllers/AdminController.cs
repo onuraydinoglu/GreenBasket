@@ -7,27 +7,29 @@ namespace GreenBasket.Controllers
     {
         public IActionResult Index()
         {
-            var model = new HomeViewModel
-            {
-                Categories = Repository.Categories
-            };
-            return View(model);
+            return View();
         }
+
         public IActionResult Product()
         {
-            var model = new HomeViewModel
-            {
-                Categories = Repository.Categories
-            };
-            return View(model);
+            var products = Repository.Products;
+
+            return View(products);
         }
+        public IActionResult ProductCreat()
+        {
+            return View();
+        }
+
         public IActionResult Category()
         {
-            var model = new HomeViewModel
-            {
-                Categories = Repository.Categories
-            };
-            return View(model);
+            var categories = Repository.Categories;
+
+            return View(categories);
+        }
+        public IActionResult CategoryCreat()
+        {
+            return View();
         }
     }
 }

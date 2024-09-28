@@ -1,0 +1,65 @@
+@model HomeViewModel
+
+<section class="my-5">
+    <div class="my-5">
+        <div class="row">
+            <div class="d-flex align-items-start">
+                <div class="col-lg-3 border-end pe-5">
+                    <vc:user-nav></vc:user-nav>
+                </div>
+                <div class="col-lg-9 ps-5">
+                    <div class="border-bottom pb-4">
+                        <h4 class="fw-bold">Account Setting</h4>
+                        <div class="my-5">
+                            <h5 class="fw-bold mb-4">Account details</h5>
+                            <form>
+                                <div class="my-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control rounded w-50" id="name" placeholder="Onur">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control rounded w-50" id="email"
+                                        placeholder="info@onur.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="text" class="form-control rounded w-50" id="phone"
+                                        placeholder="545 987 65 43">
+                                </div>
+                                <button type="submit" class="btn btn-green rounded py-2 px-4">Save
+                                    Details</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <div class="mt-5">
+                            <h5 class="fw-bold mb-4">Password</h5>
+                            <form>
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="password" class="form-label">New Password</label>
+                                        <input type="password" class="form-control rounded" id="password"
+                                            placeholder="*********">
+                                    </div>
+                                    <div class="col mb-3">
+                                        <label for="currentPassword" class="form-label">Current Password</label>
+                                        <input type="password" class="form-control rounded" id="currentPassword"
+                                            placeholder="*********">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-green rounded py-2 px-4">
+                                    Save Password
+                                </button>
+                                <p class="mt-2">
+                                    Can’t remember your current password?
+                                    <a href="#" class="text-decoration-none text-success">Reset your
+                                        password.</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

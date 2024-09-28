@@ -33,5 +33,37 @@ namespace GreenBasket.Controllers
             };
             return View(model);
         }
+
+        public IActionResult Setting()
+        {
+            var model = new HomeViewModel
+            {
+                Categories = Repository.Categories,
+                Products = Repository.Products
+            };
+            return View(model);
+        }
+
+        public IActionResult Address()
+        {
+            var model = new HomeViewModel
+            {
+                Categories = Repository.Categories,
+                Products = Repository.Products
+            };
+            return View(model);
+        }
+
+        public IActionResult Payment()
+        {
+            var model = new HomeViewModel
+            {
+                Categories = Repository.Categories,
+                Products = Repository.Products
+            };
+            return View(model);
+        }
+
+
     }
 }

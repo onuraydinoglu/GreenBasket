@@ -16,6 +16,8 @@ namespace GreenBasket.Models
 
         public string? ProductUrl { get; set; }
 
+        public bool ProductIsHome { get; set; }
+
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
 

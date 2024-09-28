@@ -74,6 +74,10 @@ a:hover{
   height: 550px;
 }
 
+.btn:hover{
+  color: #fff !important;
+}
+
 .btn-dark{
   padding: 8px 16px;
 }
@@ -93,11 +97,11 @@ a:hover{
   background-color: rgb(14, 142, 14) !important;
 }
 
-.btn-outline-success{
+.btn-success{
   padding: 10px 20px;
 }
 
-.btn-outline-success:hover{
+.btn-success:hover{
   color: #fff !important;
   padding: 10px 20px;
 }
@@ -124,6 +128,11 @@ a:hover{
   margin-bottom: 6rem;
 }
 
+.py-2-5{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .py-9{
   padding-top: 25px;
 }
@@ -133,9 +142,19 @@ a:hover{
   padding-bottom: 48px;
 }
 
+.py-12{
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
 .px-8{
   padding-left: 32px;
   padding-right: 32px;
+}
+
+.icon-wh{
+  width: 40px;
+  height: 40px;
 }
 
 .rounded{
@@ -203,6 +222,15 @@ width: 80%;
   box-shadow: 0 0 0 0.25rem #c4f6c4;
 }
 
+.form-status-select {
+  padding: 10px 75px 10px 15px;
+}
+
+.form-status-select:focus {
+  padding: 10px 75px 10px 15px;
+}
+
+
 .page-item{
   padding: 5px;
 }
@@ -243,7 +271,7 @@ width: 80%;
   color: #1b1 !important;;
 }
 
-.nav-lb-pills{
+/*.nav-lb-pills{
 color: #1e2125;
 margin-bottom: 5px;
 }
@@ -252,7 +280,7 @@ margin-bottom: 5px;
 .nav-lb-pills:hover{
   color: #fff !important;
   background-color: #001E2B !important;
-}
+}*/
 
 .table td {
   vertical-align: middle;
@@ -300,4 +328,12 @@ margin-bottom: 5px;
 
 .bi-currency-dollar{
   font-size: 20px;
+}
+
+.container-fluid{
+  width: 97%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
 }

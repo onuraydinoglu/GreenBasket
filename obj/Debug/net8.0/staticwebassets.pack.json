@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GreenBasket.bundle.scp.css",
-      "PackagePath": "staticwebassets\\GreenBasket.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -59,6 +55,42 @@
     {
       "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\fruits-vegetables.jpg",
       "PackagePath": "staticwebassets\\img\\fruits-vegetables.jpg"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\icon\\baby-food.svg",
+      "PackagePath": "staticwebassets\\img\\icon\\baby-food.svg"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\icon\\bakery.svg",
+      "PackagePath": "staticwebassets\\img\\icon\\bakery.svg"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\icon\\dairy.svg",
+      "PackagePath": "staticwebassets\\img\\icon\\dairy.svg"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\icon\\fish.svg",
+      "PackagePath": "staticwebassets\\img\\icon\\fish.svg"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\icon\\fruit.svg",
+      "PackagePath": "staticwebassets\\img\\icon\\fruit.svg"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\icon\\petfoods.svg",
+      "PackagePath": "staticwebassets\\img\\icon\\petfoods.svg"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\icon\\snacks.svg",
+      "PackagePath": "staticwebassets\\img\\icon\\snacks.svg"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\icon\\toiletries.svg",
+      "PackagePath": "staticwebassets\\img\\icon\\toiletries.svg"
+    },
+    {
+      "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\icon\\wine.svg",
+      "PackagePath": "staticwebassets\\img\\icon\\wine.svg"
     },
     {
       "Id": "C:\\Users\\onura\\Desktop\\GreenBasket\\wwwroot\\img\\pay\\amazonpay.svg",

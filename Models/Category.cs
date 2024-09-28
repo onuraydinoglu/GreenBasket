@@ -12,10 +12,19 @@ namespace GreenBasket.Models
 
         public string? CategoryUrl { get; set; }
 
+        public bool CategoryStatus { get; set; }
+
         public List<SubCategory> SubCategories { get; set; } = new List<SubCategory>();
 
         public List<Product> Products { get; set; } = new List<Product>();
 
         public List<Store> Stores { get; set; } = new List<Store>();
+
+
+        // Toplam ürün sayısını dönen yardımcı metot
+        public int GetTotalProducts()
+        {
+            return Products.Count;
+        }
     }
 }

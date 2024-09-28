@@ -1,0 +1,49 @@
+<ul class="nav flex-column nav-drk-pills mt-3">
+    <li class="nav-item mb-2">
+        <a href="/Users/Index" class="nav-link">
+            <i class="bi bi-basket me-2"></i>
+            Your Orders
+        </a>
+    </li>
+    <li class="nav-item mb-2">
+        <a href="/Users/Setting" class="nav-link">
+            <i class="bi bi-gear me-2"></i>
+            Setting
+        </a>
+    </li>
+    <li class="nav-item mb-2">
+        <a href="/Users/Address" class="nav-link">
+            <i class="bi bi-geo-alt me-2"></i>
+            Address
+        </a>
+    </li>
+    <li class="nav-item border-bottom mb-2 pb-4">
+        <a href="/Users/Payment" class="nav-link">
+            <i class="bi bi-credit-card me-2"></i>
+            Payment Method
+        </a>
+    </li>
+    <li class="nav-item mt-4">
+        <a href="#" class="nav-link">
+            <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+            Log Out
+        </a>
+    </li>
+</ul>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let defaultLink = document.querySelector('a[href="/Users/Index"]');
+        defaultLink.classList.add('active');
+
+        let currentPage = window.location.pathname;
+
+        document.querySelectorAll('.nav-drk-pills .nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                defaultLink.classList.remove('active');
+                link.classList.add('active');
+            }
+        });
+    });
+</script>

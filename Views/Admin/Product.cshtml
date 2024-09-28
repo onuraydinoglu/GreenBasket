@@ -1,11 +1,140 @@
+@model List<Product>
+
 <section class="mt-4">
     <div class="row">
-        <div class="col-lg-3 border-end">
+        <div class="col-lg-2 border-end">
             <vc:dashboard-nav></vc:dashboard-nav>
         </div>
 
-        <div class="col-lg-9">
+        <div class="col-lg-10">
             <vc:dashboard-header></vc:dashboard-header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="d-flex justify-content-between align-items-center border-bottom">
+                            <div class="mt-5 mb-3">
+                                <h2>Products</h2>
+                                <!-- breacrumb -->
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item me-3">
+                                            <a href="/Home/Index" class="text-decoration-none text-dark">Home</a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            <span class="ms-3">Products</span>
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <div>
+                                <a href="/Admin/ProductCreat" class="btn btn-green rounded py-3 px-4">Add Product</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section>
+                    <div class="mt-5">
+                        <div class="d-flex justify-content-between">
+                            <form class="w-50" action="" role="search">
+                                <input type="search" class="form-control rounded" placeholder="Search">
+                            </form>
+                            <div>
+                                <select class="form-select form-status-select rounded"
+                                    aria-label="Default select example" name="" id="">
+                                    <option selected>Status</option>
+                                    <option value="Active">Active</option>
+                                    <option value="Deactive">Deactive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                            </div>
+                                        </th>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Product Name</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col" class="text-center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var prd in Model)
+                                    {
+                                        if (prd.ProductId <= 7)
+                                        {
+
+                                            <tr>
+                                                <th scope="row" style="vertical-align: middle;">
+                                                    <div class="form-check" style="display: flex; align-items: center;">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckDefault">
+                                                    </div>
+                                                </th>
+                                                <td><img src="~/img/products/@prd.ProductImage" alt="" style="width: 50px"></td>
+                                                <td>@prd.ProductName</td>
+                                                <td>@prd.Category?.CategoryName</td>
+                                                <td>
+                                                    <span class="badge rounded @(prd.ProductStok ? "bg-success" : "bg-danger")">
+                                                        @(prd.ProductStok ? "Active" : "Deactive")
+                                                    </span>
+                                                </td>
+                                                <td>@prd.ProductPrice</td>
+                                                <td class="text-center">
+                                                    <a class="btn btn-green btn-sm me-2">
+                                                        Edit
+                                                        <i class="bi bi-pencil-square ms-1"></i>
+                                                    </a>
+                                                    <a class="btn btn-danger btn-sm">
+                                                        Delet
+                                                        <i class="bi bi-trash ms-1"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <div class="text-muted">
+                            <p>Showing 1 to 8 of 12 entries</p>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a href="#" class="page-link rounded" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a href="#" class="page-link rounded">1</a></li>
+                                    <li class="page-item"><a href="#" class="page-link rounded">2</a></li>
+                                    <li class="page-item"><a href="#" class="page-link rounded">...</a></li>
+                                    <li class="page-item"><a href="#" class="page-link rounded">8</a></li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link rounded" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 </section>
