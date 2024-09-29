@@ -11,7 +11,12 @@
                     <div class="">
                         <div class="d-flex justify-content-between mb-4">
                             <h5 class="fw-bold">Address</h5>
-                            <a href="#" class="btn btn-outline-success rounded">Add a new address</a>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-outline-success rounded" data-bs-toggle="modal"
+                                data-bs-target="#address">
+                                Add a new address
+                            </button>
                         </div>
                         <div class="row">
                             <div class="col-lg-4">
@@ -90,3 +95,57 @@
             </div>
         </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="address" tabindex="-1" aria-labelledby="addressModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header align-items-start">
+                <div class="d-flex flex-column">
+                    <h1 class="modal-title fs-5" id="addressModal">New Shipping Address</h1>
+                    <p class="small mb-0">Add new shipping address for your order delivery.</p>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control rounded" id="title" placeholder="Title">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control rounded" id="fullName" placeholder="Full Name">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control rounded" id="number" placeholder="Number">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control rounded" id="address" placeholder="Address">
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select rounded" aria-label="Default select example">
+                            <option selected>City</option>
+                            <option value="Istanbul">İstanbul</option>
+                            <option value="Ankara">Ankara</option>
+                            <option value="Samsun">Samsun</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select rounded" aria-label="Default select example">
+                            <option selected>District</option>
+                            <option value="Istanbul">Esenler</option>
+                            <option value="Ankara">Kızılay</option>
+                            <option value="Samsun">Atakum</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control rounded" id="postalCode" placeholder="Postal Code">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary rounded" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-green rounded">Save Address</button>
+            </div>
+        </div>
+    </div>
+</div>

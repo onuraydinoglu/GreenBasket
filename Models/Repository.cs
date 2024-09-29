@@ -524,6 +524,7 @@ namespace GreenBasket.Models
                 new Store() {StoreId = 7, StoreName ="Spencers"},
                 new Store() {StoreId = 8, StoreName ="Online Grocery"}
             };
+
             _address = new List<Address>()
             {
                 new Address()
@@ -547,8 +548,6 @@ namespace GreenBasket.Models
                     PostalCode = 402-776-1106
                 }
             };
-
-
         }
 
         /*Category*/
@@ -562,6 +561,10 @@ namespace GreenBasket.Models
         public static Category? GetCategoryByUrl(string url)
         {
             return _categories.FirstOrDefault(p => p.CategoryUrl == url);
+        }
+        public static Category? GetCategoryById(int id)
+        {
+            return _categories.SingleOrDefault(x => x.CategoryId == id);
         }
 
         /*SubCategory*/
@@ -584,6 +587,11 @@ namespace GreenBasket.Models
         public static Product? GetProductByUrl(string url)
         {
             return _products.FirstOrDefault(p => p.ProductUrl == url);
+        }
+
+        public static Product? GetProductById(int id)
+        {
+            return _products.SingleOrDefault(x => x.ProductId == id);
         }
 
 

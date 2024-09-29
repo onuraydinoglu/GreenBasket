@@ -10,7 +10,12 @@
                 <div class="col-lg-9 ps-5">
                     <div class="d-flex justify-content-between mb-4">
                         <h5 class="fw-bold">Payment Methods</h5>
-                        <a href="#" class="btn btn-outline-success rounded">Add Payment</a>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-outline-success rounded" data-bs-toggle="modal"
+                            data-bs-target="#payment">
+                            Add Payment
+                        </button>
                     </div>
                     <div class="my-4">
                         <ul class="list-group list-group-flush">
@@ -113,3 +118,88 @@
             </div>
         </div>
 </section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="payment" tabindex="-1" aria-labelledby="addressModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addressModal">Add New Payment Method</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="modal-title fs-5 my-2">Credit / Debit card</h1>
+                            <div class="mb-3">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="card" id="amerikanExpress"
+                                        value="amerikanExpress">
+                                    <label class="form-check-label" for="amerikanExpress">
+                                        <img src="~/img/pay/american-express.svg" alt="">
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="card" id="masterCard"
+                                        value="masterCard">
+                                    <label class="form-check-label" for="masterCard">
+                                        <img src="~/img/pay/mastercard.svg" alt="">
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="card" id="visa" value="visa">
+                                    <label class="form-check-label" for="visa">
+                                        <img src="~/img/pay/visa.svg" alt="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col">
+                            <label for="name" class="form-label">Name on card</label>
+                            <input type="text" class="form-control rounded" id="name" placeholder="Name">
+                        </div>
+                        <div class="col">
+                            <label for="month" class="form-label">Month</label>
+                            <select class="form-select form-select-sm rounded" aria-label="Default select example">
+                                <option selected>Month</option>
+                                <option value="1">Ocak</option>
+                                <option value="2">Şubat</option>
+                                <option value="3">Mart</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="month" class="form-label">Year</label>
+                            <select class="form-select form-select-sm rounded" aria-label="Default select example">
+                                <option selected>Year</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-md-8">
+                            <label for="cardNumber" class="form-label">Card Number</label>
+                            <input type="text" class="form-control rounded" id="cardNumber">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="cvv" class="form-label">CVV Code</label>
+                            <input type="text" class="form-control rounded" id="cvv">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer justify-content-start">
+                <button type="button" class="btn btn-outline-secondary rounded" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-green rounded">Add New Card</button>
+            </div>
+            <div>
+                <h1 class="fs-5 ms-3 mb-3">Note: that you can later remove your card at the account setting page.</h1>
+            </div>
+        </div>
+    </div>
+</div>

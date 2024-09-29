@@ -13,7 +13,7 @@
                             class="text-decoration-none text-success mx-3">Shop</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
-                        <span class="ms-3">Dairy, Bread & Eggs</span>
+                        <span class="ms-3">@Model.Category?.CategoryName</span>
                     </li>
                 </ol>
             </nav>
@@ -82,7 +82,7 @@
             <!-- Category Title -->
             <div class="bg-light border-0 rounded">
                 <div class="card-body">
-                    <h2 class="p-4 fs-1 fw-bold">Dairy, Bread & Eggs</h2>
+                    <h2 class="p-4 fs-1 fw-bold">@Model.Category.CategoryName</h2>
                 </div>
             </div>
 

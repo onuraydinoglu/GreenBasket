@@ -10,6 +10,22 @@ namespace GreenBasket.Controllers
             return View();
         }
 
+        public IActionResult Category()
+        {
+            var categories = Repository.Categories;
+
+            return View(categories);
+        }
+        public IActionResult CategoryCreat()
+        {
+            return View();
+        }
+        public IActionResult CategoryEdit(int id)
+        {
+            var category = Repository.GetCategoryById(id);
+            return View(category);
+        }
+
         public IActionResult Product()
         {
             var products = Repository.Products;
@@ -20,16 +36,10 @@ namespace GreenBasket.Controllers
         {
             return View();
         }
-
-        public IActionResult Category()
+        public IActionResult ProductEdit(int id)
         {
-            var categories = Repository.Categories;
-
-            return View(categories);
-        }
-        public IActionResult CategoryCreat()
-        {
-            return View();
+            var product = Repository.GetProductById(id);
+            return View(product);
         }
     }
 }

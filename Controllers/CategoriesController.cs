@@ -17,6 +17,7 @@ public class CategoriesController : Controller
         var modelView = new HomeViewModel
         {
             Categories = Repository.Categories,
+            Category = category,
             SubCategories = Repository.SubCategories,
             Products = products,
             Stores = Repository.Stores

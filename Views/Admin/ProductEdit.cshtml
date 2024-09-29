@@ -1,0 +1,176 @@
+<section class="mt-4">
+    <div class="row">
+        <div class="col-lg-2 border-end">
+            <vc:dashboard-nav></vc:dashboard-nav>
+        </div>
+
+        <div class="col-lg-10">
+            <vc:dashboard-header></vc:dashboard-header>
+
+            <div class="container">
+                <!-- Breacrumb -->
+                <section>
+                    <div class="row">
+                        <div class="col-lg-12 ">
+                            <div class="d-flex justify-content-between align-items-center border-bottom">
+                                <div class="mt-5 mb-3">
+                                    <h2>Add New Products</h2>
+                                    <!-- breacrumb -->
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item me-3">
+                                                <a asp-controller="Home" asp-action="Index"
+                                                    class="text-decoration-none text-dark">Home</a>
+                                            </li>
+                                            <li class="breadcrumb-item">
+                                                <a href="/Admin/Product"
+                                                    class="text-decoration-none text-dark mx-3">Product</a>
+                                            </li>
+                                            <li class="breadcrumb-item  active" aria-current="page">
+                                                <span class="ms-3">Add New Products</span>
+                                            </li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <div>
+                                    <a href="/Admin/Product" class="btn btn-green py-3 px-4 rounded">Back to Product</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Creat -->
+                <section class="my-5">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="border rounded shadow p-4">
+                                        <h4 class="mb-4 h5">Product Information</h4>
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="mb-3">
+                                                        <label for="name" class="form-label">Product Name</label>
+                                                        <input type="text" class="form-control rounded" id="name"
+                                                            placeholder="Name">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="url" class="form-label">Product Url</label>
+                                                        <input type="text" class="form-control rounded" id="url"
+                                                            placeholder="Url">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="mb-3">
+                                                        <label for="status" class="form-label">Product Category</label>
+                                                        <select class="form-select form-select-sm rounded"
+                                                            aria-label="Default select example" name="" id="">
+                                                            <option selected>Product Category</option>
+                                                            <option value="Active">Active</option>
+                                                            <option value="Deactive">Deactive</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="image" class="form-label">Product Image</label>
+                                                        <div>
+                                                            <input type="file" class="form-control-file" id="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="benefits" class="form-label">Nutrient Value &
+                                                    Benefits</label>
+                                                <textarea class="form-control" id="benefits" rows="4"></textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="storageTips" class="form-label">Storage Tips</label>
+                                                <textarea class="form-control" id="storageTips" rows="3"></textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Units</label>
+                                                <select class="form-select form-select-sm rounded"
+                                                    aria-label="Default select example">
+                                                    <option selected>Select Units</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form>
+                                        <div class="border rounded shadow p-4">
+                                            <h4 class="mb-4 h5">Product Price</h4>
+                                            <div class="mb-3">
+                                                <label for="regularPrice" class="form-label">Regular Price</label>
+                                                <input type="text" class="form-control rounded" id="regularPrice"
+                                                    placeholder="$0.00">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="salePrice" class="form-label">Sale Price</label>
+                                                <input type="text" class="form-control rounded" id="salePrice"
+                                                    placeholder="$0.00">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-lg-12">
+                                    <form>
+                                        <div class="border rounded shadow mt-5 p-4">
+                                            <div class="border-bottom">
+                                                <div class="mb-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckDefault">
+                                                        <label class="form-check-label" for="inStock">
+                                                            In Stock
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="productCode" class="form-label">Product Code</label>
+                                                    <input type="text" class="form-control rounded" id="productCode"
+                                                        placeholder="#0000-0000">
+                                                </div>
+                                            </div>
+
+                                            <h4 class="mb-4 mt-4 h5">Status</h4>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="status"
+                                                    id="statusActive" value="active">
+                                                <label class="form-check-label" for="statusActive">Active</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="status"
+                                                    id="statusDeactive" value="deactive">
+                                                <label class="form-check-label" for="statusDeactive">Deactive</label>
+                                            </div>
+                                            <div class="d-grid gab-2 mt-4">
+                                                <a type="submit" class="btn btn-green rounded py-2">Save Product</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
