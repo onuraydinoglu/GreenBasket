@@ -58,19 +58,5 @@ GreenBasket, bir e-ticaret web uygulaması olarak tasarlanmış ve **ASP.NET Cor
 - Detaylı ürün görüntüleme
 - Güvenli ödeme işlemleri
 
-## Geliştirme Önerileri
-- **Veritabanı Entegrasyonu**:
-  - Şu anda Repository Pattern ile statik veri kullanılıyor.
-  - **Entity Framework Core** ile gerçek veritabanı entegrasyonu yapılabilir.
-- **Güvenlik**:
-  - Authentication ve Authorization eklenebilir.
-  - JWT veya Cookie tabanlı kimlik doğrulama implementasyonu yapılabilir.
-- **API Desteği**:
-  - RESTful API endpoints eklenebilir.
-  - Mobil uygulama desteği sağlanabilir.
-- **Ödeme Entegrasyonu**:
-  - Payment gateway entegrasyonu yapılabilir.
-  - Güvenli ödeme işlemleri sağlanabilir.
-
 ## Özet
 GreenBasket, temel bir e-ticaret altyapısı sunmakta ve geliştirmeye açık bir yapıda tasarlanmıştır. Veri erişimi için **Repository Pattern**, tekrar kullanılabilir UI bileşenleri için **ViewComponents** kullanılmıştır. **CRUD** operasyonları ve routing işlemleri başarıyla uygulanmış olup, gelecekteki geliştirmeler için sağlam bir temel sunmaktadır.
